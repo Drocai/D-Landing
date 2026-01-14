@@ -33,7 +33,7 @@ export const RELEASES = [
     title: 'HUSH',
     meta: 'Single • Live',
     desc: 'Quiet doesn\'t mean soft.',
-    cover: 'hush.jpg',
+    cover: 'hush.jpeg',
     primaryCtas: [
       { label: '🎧 Spotify', href: 'https://open.spotify.com/album/3qLxOdcaEBBUDN14kdH5h4' },
       { label: '🍎 Apple Music', href: '#' },
