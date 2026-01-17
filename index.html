@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mud In Trap | Country Meets Trap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --purple: #8a2be2;
+            --bg: #050505;
+            --panel: rgba(20, 20, 20, 0.8);
+            --text: #ffffff;
+            --muted: rgba(255, 255, 255, 0.6);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+                url('https://images.unsplash.com/photo-1506466010722-395aa2bef877?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Purple Waterfall Glow */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% -20%, rgba(138, 43, 226, 0.5), transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        h1, h2, h3, .cinzel {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--muted);
+            letter-spacing: 4px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+            background: var(--panel);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--purple);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Email Capture */
+        .email-form {
+            display: flex;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .email-input {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--purple);
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .email-submit {
+            background: linear-gradient(135deg, var(--purple), var(--gold));
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .email-submit:hover {
+            transform: scale(1.05);
+        }
+
+        .email-msg {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            min-height: 1.2em;
+        }
+
+        /* Roadmap */
+        .roadmap-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .track-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .track-name { font-weight: bold; font-size: 1.1rem; }
+        .track-status { color: var(--purple); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+
+        /* Photo Wall */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-item {
+            aspect-ratio: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .loading {
+            text-align: center;
+            color: var(--muted);
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .email-form { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="hero-title">Mud In Trap</h1>
+            <p class="hero-subtitle">Country Meets Trap</p>
+        </header>
+
+        <section class="section" id="hero">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 class="cinzel" style="font-size: 1.5rem; margin-bottom: 10px;">Join the Movement</h2>
+                <p style="color: var(--muted);">Get notified on new drops and exclusive content.</p>
+            </div>
+            <form class="email-form" id="emailForm">
+                <input type="email" class="email-input" placeholder="Enter your email address" required>
+                <button type="submit" class="email-submit">SUBSCRIBE</button>
+            </form>
+            <div id="emailMsg" class="email-msg"></div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title cinzel">Season Roadmap</h2>
+            <div id="roadmapGrid" class="roadmap-list">
+                <div class="loading">Loading tracks...</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title cinzel">Photo Wall</h2>
+            <div id="photoGrid" class="photo-grid">
+                <div class="loading">Loading photos...</div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const SUPABASE_URL = 'https://skytldwvwkfulytqnuac.supabase.co';
+        const SUPABASE_KEY = 'sb_publishable_3pwfy4YCOqGYsBNtWupSVw_ziIAyjh2';
+        const supabase = libsupabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        async function init() {
+            // Email Capture
+            const emailForm = document.getElementById('emailForm');
+            const emailMsg = document.getElementById('emailMsg');
+            
+            emailForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const email = emailForm.querySelector('input').value;
+                emailMsg.textContent = 'Processing...';
+                emailMsg.style.color = 'var(--gold)';
+
+                const { error } = await supabase
+                    .from('subscribers')
+                    .insert([{ email }]);
+
+                if (error) {
+                    emailMsg.textContent = 'Error: ' + error.message;
+                    emailMsg.style.color = '#ff4444';
+                } else {
+                    emailMsg.textContent = 'You are in. Welcome to the trap.';
+                    emailMsg.style.color = 'var(--purple)';
+                    emailForm.reset();
+                }
+            });
+
+            // Fetch Tracks
+            const roadmapGrid = document.getElementById('roadmapGrid');
+            const { data: tracks, error: tracksError } = await supabase
+                .from('tracks')
+                .select('*')
+                .order('id', { ascending: true });
+
+            if (tracksError) {
+                roadmapGrid.innerHTML = `<div class="loading">Error: ${tracksError.message}</div>`;
+            } else if (tracks && tracks.length > 0) {
+                roadmapGrid.innerHTML = tracks.map(track => `
+                    <div class="track-item">
+                        <div class="track-name">${track.title || track.name}</div>
+                        <div class="track-status">${track.status || 'Released'}</div>
+                    </div>
+                `).join('');
+            } else {
+                roadmapGrid.innerHTML = '<div class="loading">No tracks found.</div>';
+            }
+
+            // Fetch Posts
+            const photoGrid = document.getElementById('photoGrid');
+            const { data: posts, error: postsError } = await supabase
+                .from('posts')
+                .select('*')
+                .eq('visibility', 'public')
+                .order('created_at', { ascending: false });
+
+            if (postsError) {
+                photoGrid.innerHTML = `<div class="loading">Error: ${postsError.message}</div>`;
+            } else if (posts && posts.length > 0) {
+                photoGrid.innerHTML = posts.map(post => `
+                    <div class="photo-item">
+                        <img src="${post.image_url || post.url}" alt="${post.caption || 'Photo'}" loading="lazy">
+                    </div>
+                `).join('');
+            } else {
+                photoGrid.innerHTML = '<div class="loading">No public photos found.</div>';
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
