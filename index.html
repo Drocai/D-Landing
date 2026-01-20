@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mud In Trap | Country Meets Trap</title>
+    <title>D RoC | Daddy Frequency - Official Music Hub</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="D RoC - Daddy Frequency Productions. Stream the latest tracks, join the movement, and experience the Purple Chalk game.">
+    <meta name="keywords" content="D RoC, Daddy Frequency, trap music, I Want It All, Hush, Purple Chalk">
+    <meta name="author" content="D RoC">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://d-roc.vercel.app/">
+    <meta property="og:title" content="D RoC | Daddy Frequency - Official Music Hub">
+    <meta property="og:description" content="Stream the latest tracks, join the movement, and experience the Purple Chalk game.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="D RoC | Daddy Frequency - Official Music Hub">
+
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -185,6 +201,42 @@
             padding: 20px;
         }
 
+        /* Game CTA */
+        .game-cta {
+            text-align: center;
+            padding: 50px 40px;
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(79, 70, 229, 0.2));
+            border: 2px solid var(--purple);
+        }
+
+        .game-cta h2 {
+            color: #c4b5fd;
+            margin-bottom: 15px;
+        }
+
+        .game-cta p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .game-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+        }
+
+        .game-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(124, 58, 237, 0.8);
+        }
+
         @media (max-width: 768px) {
             .hero-title { font-size: 2.5rem; }
             .email-form { flex-direction: column; }
@@ -194,9 +246,16 @@
 <body>
     <div class="container">
         <header>
-            <h1 class="hero-title">Mud In Trap</h1>
-            <p class="hero-subtitle">Country Meets Trap</p>
+            <h1 class="hero-title">D RoC</h1>
+            <p class="hero-subtitle">Daddy Frequency Productions</p>
         </header>
+
+        <!-- GAME CTA - Purple Chalk Experience -->
+        <section class="section game-cta">
+            <h2 class="cinzel">Play the Purple Chalk Experience</h2>
+            <p>Step into the noir mystery. Investigate the case. Uncover the truth behind the chalk outlines.</p>
+            <a href="https://www.purplechalked.com" target="_blank" class="game-button">START THE CASE</a>
+        </section>
 
         <section class="section" id="hero">
             <div style="text-align: center; margin-bottom: 30px;">
@@ -250,7 +309,7 @@
                     emailMsg.textContent = 'Error: ' + error.message;
                     emailMsg.style.color = '#ff4444';
                 } else {
-                    emailMsg.textContent = 'You are in. Welcome to the trap.';
+                    emailMsg.textContent = 'You are in. Welcome to the frequency.';
                     emailMsg.style.color = 'var(--purple)';
                     emailForm.reset();
                 }
