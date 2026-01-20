@@ -4,19 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>D RoC | Official Hub</title>
-  <meta name="description" content="D RoC — official release hub. Stream I WANT IT ALL + HuSH. Pre-save Dumb Bull in a China Shop." />
+  <!-- Primary SEO -->
+  <title>D RoC | Official Hub - Daddy Frequency Productions</title>
+  <meta name="description" content="D RoC official hub. Stream I WANT IT ALL, HuSH, and more. Explore Purple Chalked, exclusive content, and all Daddy Frequency Productions projects." />
+  <meta name="keywords" content="D RoC, Daddy Frequency, I Want It All, HuSH, Dumb Bull in a China Shop, Purple Chalked, hip hop, rap, music, streaming" />
+  <meta name="author" content="D RoC / Daddy Frequency Productions" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://d-roc.vercel.app/" />
 
-  <!-- Open Graph (static preview for link shares) -->
-  <meta property="og:title" content="D RoC | Official Hub" />
-  <meta property="og:description" content="Stream I WANT IT ALL + HuSH. Pre-save Dumb Bull in a China Shop." />
-  <meta property="og:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F8880983--2444F019-2C92-4EA9-B4185819882EB848--0--1782671--C7ED20F13EF34741AEC681D2977C3CFF.png?fm=jpg&q=75&w=1200" />
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="D RoC Official Hub" />
+  <meta property="og:title" content="D RoC | Official Hub - Daddy Frequency Productions" />
+  <meta property="og:description" content="Stream I WANT IT ALL + HuSH. Explore Purple Chalked and all D RoC projects. Official music hub." />
+  <meta property="og:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F8880983--2444F019-2C92-4EA9-B4185819882EB848--0--1782671--C7ED20F13EF34741AEC681D2977C3CFF.png?fm=jpg&q=75&w=1200" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://d-roc.vercel.app/" />
+  <meta property="og:locale" content="en_US" />
 
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="D RoC | Official Hub" />
-  <meta name="twitter:description" content="Stream I WANT IT ALL + HuSH. Pre-save Dumb Bull in a China Shop." />
+  <meta name="twitter:title" content="D RoC | Official Hub - Daddy Frequency Productions" />
+  <meta name="twitter:description" content="Stream I WANT IT ALL + HuSH. Explore Purple Chalked and all D RoC projects." />
   <meta name="twitter:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F8880983--2444F019-2C92-4EA9-B4185819882EB848--0--1782671--C7ED20F13EF34741AEC681D2977C3CFF.png?fm=jpg&q=75&w=1200" />
+  <meta name="twitter:creator" content="@bigdroc" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "D RoC",
+    "alternateName": "Daddy Frequency",
+    "description": "Hip-hop artist and producer. No soft drops. Just finished work, loud.",
+    "url": "https://d-roc.vercel.app/",
+    "genre": ["Hip Hop", "Rap"],
+    "sameAs": [
+      "https://www.instagram.com/_d_roc_",
+      "https://www.tiktok.com/@big.droc",
+      "https://youtube.com/@bigdroc",
+      "https://open.spotify.com/artist/YOUR_SPOTIFY_ID",
+      "https://purplechalked.com"
+    ],
+    "member": {
+      "@type": "Person",
+      "name": "D RoC"
+    }
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,6 +67,7 @@
     :root {
       --gold: #d4af37;
       --red: #ff2a2a;
+      --purple: #8a2be2;
       --bg0: #070707;
       --bg1: #101010;
       --panel: rgba(0, 0, 0, 0.28);
@@ -38,6 +78,8 @@
       --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
       --radius: 18px;
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -50,7 +92,6 @@
       overflow-x: hidden;
     }
 
-    /* WebGL background */
     #bg {
       position: fixed;
       inset: 0;
@@ -61,7 +102,6 @@
       opacity: 0.95;
     }
 
-    /* vignette */
     body::before {
       content: '';
       position: fixed;
@@ -159,7 +199,15 @@
 
     .pill.ghost:hover { transform: translateY(-2px); }
 
-    /* hero */
+    .pill.purple {
+      background: linear-gradient(135deg, var(--purple) 0%, #5a189a 100%);
+      box-shadow: 0 10px 25px rgba(138,43,226,0.22);
+    }
+
+    .pill.purple:hover {
+      box-shadow: 0 14px 30px rgba(138,43,226,0.32);
+    }
+
     .hero {
       margin-top: 18px;
       display: grid;
@@ -195,7 +243,6 @@
       transform: scale(1.01);
     }
 
-    /* light sweep */
     .cover::before {
       content: '';
       position: absolute;
@@ -387,6 +434,20 @@
 
     .platform-card:hover::before { opacity: 0.12; }
 
+    .platform-card.purple-card {
+      background: linear-gradient(135deg, rgba(138,43,226,0.15) 0%, rgba(90,24,154,0.10) 100%);
+      border: 1px solid rgba(138,43,226,0.35);
+    }
+
+    .platform-card.purple-card::before {
+      background: linear-gradient(135deg, rgba(138,43,226,0.40), rgba(90,24,154,0.22));
+    }
+
+    .platform-card.purple-card:hover {
+      border-color: rgba(138,43,226,0.65);
+      box-shadow: 0 18px 45px rgba(138,43,226,0.18);
+    }
+
     .p-ico { font-size: 1.65rem; position: relative; z-index: 1; }
     .p-meta { position: relative; z-index: 1; }
     .p-name { font-weight: 900; letter-spacing: 0.3px; }
@@ -446,63 +507,227 @@
       border: 1px solid rgba(255,255,255,0.14);
     }
 
-    .footer {
-      margin-top: 34px;
-      padding: 22px 10px;
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      padding: 24px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card.purple-chalk {
+      background: linear-gradient(135deg, rgba(138,43,226,0.20) 0%, rgba(90,24,154,0.15) 100%);
+      border: 1px solid rgba(138,43,226,0.35);
+    }
+
+    .project-card.purple-chalk:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(138,43,226,0.25);
+      border-color: rgba(138,43,226,0.55);
+    }
+
+    .project-card.mud-trap {
+      background: linear-gradient(135deg, rgba(212,175,55,0.15) 0%, rgba(139,90,43,0.12) 100%);
+      border: 1px solid rgba(212,175,55,0.30);
+    }
+
+    .project-card.mud-trap:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(212,175,55,0.20);
+      border-color: rgba(212,175,55,0.50);
+    }
+
+    .project-badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .project-badge.purple { background: rgba(138,43,226,0.30); color: #c084fc; }
+    .project-badge.gold { background: rgba(212,175,55,0.30); color: var(--gold); }
+
+    .project-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .project-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .project-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    .project-card.purple-chalk .project-cta { color: #c084fc; }
+    .project-card.mud-trap .project-cta { color: var(--gold); }
+
+    /* Newsletter Section */
+    .newsletter-box {
+      padding: 32px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(212,175,55,0.08) 0%, rgba(255,42,42,0.05) 100%);
+      border: 1px solid rgba(212,175,55,0.20);
       text-align: center;
-      color: rgba(255,255,255,0.42);
+    }
+
+    .newsletter-title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, var(--gold), var(--red));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .newsletter-desc {
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      min-width: 220px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(0,0,0,0.40);
+      color: var(--text);
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 160ms ease;
+    }
+
+    .newsletter-input::placeholder { color: var(--muted2); }
+    .newsletter-input:focus { border-color: var(--gold); }
+
+    .newsletter-btn {
+      padding: 14px 24px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, var(--gold), var(--red));
+      color: #0b0b0b;
+      font-weight: 900;
+      font-size: 1rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: transform 160ms ease, filter 160ms ease;
+    }
+
+    .newsletter-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .newsletter-status {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--gold);
+      min-height: 24px;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 48px;
+      padding: 32px 16px;
+      text-align: center;
       border-top: 1px solid rgba(255,255,255,0.08);
     }
 
-    .footer-brand{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:14px;
-      flex-wrap:wrap;
-    }
-    .artist-photo{
-      width:120px;
-      height:120px;
-      border-radius:999px;
-      object-fit:cover;
-      border:3px solid rgba(212,175,55,0.9);
-      box-shadow: 0 14px 40px rgba(0,0,0,0.45);
-    }
-    .footer strong { color: rgba(212,175,55,0.9); }
-
-    
     .footer-row {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
+      gap: 20px;
       flex-wrap: wrap;
+      margin-bottom: 24px;
     }
+
     .footer-photo {
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
       border-radius: 999px;
       object-fit: cover;
       border: 3px solid rgba(212,175,55,0.9);
       box-shadow: 0 14px 40px rgba(212,175,55,0.16);
     }
+
     .footer-text { text-align: center; }
-@media (max-width: 900px) {
+    .footer-text strong { color: var(--gold); font-size: 1.1rem; }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: color 160ms ease;
+    }
+
+    .footer-link:hover { color: var(--gold); }
+
+    .footer-copy {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
       .title { font-size: 2.25rem; }
       .top-actions { justify-content: flex-start; }
     }
 
-    
     @media (max-width: 520px) {
       .topbar { flex-wrap: wrap; }
       .brand { width: 100%; justify-content: center; }
       .top-actions { width: 100%; justify-content: center; }
       .brand .mark { font-size: 1.02rem; letter-spacing: 1.2px; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-input { min-width: 100%; }
     }
 
-@media (prefers-reduced-motion: reduce) {
+    @media (prefers-reduced-motion: reduce) {
       .cover::before { display: none; }
       * { scroll-behavior: auto !important; }
     }
@@ -518,61 +743,101 @@
         <div class="mark"><span class="mark-d">D</span><span class="mark-roc">RoC</span></div>
         <div class="sub">Daddy Frequency • Official Hub</div>
       </div>
-      <div class="top-actions">
+      <nav class="top-actions" aria-label="Main navigation">
         <a class="pill" href="#releases">🎧 Releases</a>
+        <a class="pill purple" href="https://purplechalked.com" target="_blank" rel="noopener noreferrer">🔮 Purple Chalked</a>
         <a class="pill ghost" href="https://www.instagram.com/_d_roc_" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
         <a class="pill ghost" href="https://www.tiktok.com/@big.droc" target="_blank" rel="noopener noreferrer">📱 TikTok</a>
         <a class="pill ghost" href="https://youtube.com/@bigdroc" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
-      </div>
+      </nav>
     </header>
 
-    <section class="hero">
-      <div class="panel cover-wrap">
-        <div class="badge" id="heroBadge">Out Now</div>
-        <div class="cover">
-          <img id="heroCover" alt="Release cover" decoding="async" loading="eager" />
+    <main>
+      <section class="hero" aria-label="Featured release">
+        <div class="panel cover-wrap">
+          <div class="badge" id="heroBadge">Out Now</div>
+          <div class="cover">
+            <img id="heroCover" alt="Release cover" decoding="async" loading="eager" />
+          </div>
         </div>
-      </div>
 
-      <div class="panel hero-copy">
-        <div class="release-switch" id="releaseTabs" aria-label="Release switcher"></div>
+        <div class="panel hero-copy">
+          <div class="release-switch" id="releaseTabs" role="tablist" aria-label="Release switcher"></div>
 
-        <h1 class="title" id="heroTitle">I WANT IT ALL</h1>
-        <div class="byline">
-          <span class="artist">D RoC</span>
-          <span id="heroMeta">Single • Out now</span>
+          <h1 class="title" id="heroTitle">I WANT IT ALL</h1>
+          <div class="byline">
+            <span class="artist">D RoC</span>
+            <span id="heroMeta">Single • Out now</span>
+          </div>
+          <p class="desc" id="heroDesc">No soft drops. No filler. Just finished work, loud.</p>
+
+          <div class="cta-row" id="heroCtas"></div>
         </div>
-        <p class="desc" id="heroDesc">No soft drops. No filler. Just finished work, loud.</p>
+      </section>
 
-        <div class="cta-row" id="heroCtas"></div>
-      </div>
-    </section>
+      <section class="section" aria-label="Streaming platforms">
+        <h2 class="section-title" id="platformsTitle">Open this release</h2>
+        <div class="platforms" id="platformsGrid"></div>
+      </section>
 
-    <section class="section" aria-label="Streaming platforms">
-      <div class="section-title" id="platformsTitle">Open this release</div>
-      <div class="platforms" id="platformsGrid"></div>
-    </section>
+      <section class="section" id="projects" aria-label="Projects">
+        <h2 class="section-title">Explore My World</h2>
+        <div class="projects-grid">
+          <a href="https://purplechalked.com" target="_blank" rel="noopener noreferrer" class="project-card purple-chalk">
+            <span class="project-badge purple">Interactive Experience</span>
+            <h3 class="project-title">Purple Chalked</h3>
+            <p class="project-desc">Step into the noir mystery. Investigate the case. Uncover the truth behind the chalk outlines.</p>
+            <span class="project-cta">Enter the experience →</span>
+          </a>
+          <a href="https://mud-in-the-trap.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card mud-trap">
+            <span class="project-badge gold">Season Hub</span>
+            <h3 class="project-title">Mud in the Trap</h3>
+            <p class="project-desc">Track the season roadmap. Get notified on new drops and exclusive content.</p>
+            <span class="project-cta">View the roadmap →</span>
+          </a>
+        </div>
+      </section>
 
-    <section class="section" id="releases" aria-label="All releases">
-      <div class="section-title">All releases</div>
-      <div class="release-grid" id="releaseCards"></div>
-    </section>
+      <section class="section" id="releases" aria-label="All releases">
+        <h2 class="section-title">All Releases</h2>
+        <div class="release-grid" id="releaseCards"></div>
+      </section>
+
+      <section class="section" id="subscribe" aria-label="Newsletter">
+        <div class="newsletter-box">
+          <h2 class="newsletter-title">Join the Movement</h2>
+          <p class="newsletter-desc">Get notified on new drops, exclusive content, and behind-the-scenes access.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address" />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+          <div class="newsletter-status" id="newsletterStatus" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="footer-row">
         <img class="footer-photo" src="artist-photo.jpeg" alt="D RoC artist photo" loading="lazy" decoding="async" />
         <div class="footer-text">
           <div><strong>DADDY FREQUENCY PRODUCTIONS</strong></div>
-          <div style="margin-top:8px;">© 2026 D RoC. All rights reserved.</div>
+          <div style="margin-top:6px; color: var(--muted2);">No soft drops. Just finished work, loud.</div>
         </div>
       </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a class="footer-link" href="#releases">Releases</a>
+        <a class="footer-link" href="#projects">Projects</a>
+        <a class="footer-link" href="https://purplechalked.com" target="_blank" rel="noopener noreferrer">Purple Chalked</a>
+        <a class="footer-link" href="https://www.instagram.com/_d_roc_" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="footer-link" href="https://www.tiktok.com/@big.droc" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a class="footer-link" href="https://youtube.com/@bigdroc" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </nav>
+      <p class="footer-copy">© 2026 D RoC / Daddy Frequency Productions. All rights reserved.</p>
     </footer>
   </div>
 
   <script>
-    // --- Covers are referenced as local files in the same folder as this index.html ---
-
-  const SOCIALS = {
+    const SOCIALS = {
       instagram: 'https://www.instagram.com/_d_roc_',
       tiktok: 'https://www.tiktok.com/@big.droc',
       youtube: 'https://youtube.com/@bigdroc'
@@ -602,7 +867,7 @@
         badge: 'OUT NOW',
         title: 'HUSH',
         meta: 'Single • Live',
-        desc: 'Quiet doesn’t mean soft.',
+        desc: 'Quiet doesn\'t mean soft.',
         cover: 'hush.jpeg',
         primaryCtas: [
           { label: '🎧 Spotify', href: 'https://open.spotify.com/album/3qLxOdcaEBBUDN14kdH5h4' },
@@ -611,7 +876,7 @@
         ],
         platforms: [
           { icon: '🎵', name: 'Spotify', cta: 'Stream now →', href: 'https://open.spotify.com/album/3qLxOdcaEBBUDN14kdH5h4' },
-          { icon: '🍎', name: 'Apple Music', cta: 'Link needed →', href: '#' },
+          { icon: '🍎', name: 'Apple Music', cta: 'Coming soon →', href: '#' },
           { icon: '▶️', name: 'YouTube', cta: 'Watch + subscribe →', href: 'https://youtube.com/@bigdroc' }
         ]
       },
@@ -627,7 +892,7 @@
           { label: '▶️ YouTube', href: 'https://youtube.com/@bigdroc' }
         ],
         platforms: [
-          { icon: '⭐', name: 'Pre-save', cta: 'Placeholder →', href: '#' },
+          { icon: '⭐', name: 'Pre-save', cta: 'Coming soon →', href: '#' },
           { icon: '▶️', name: 'YouTube', cta: 'Watch + subscribe →', href: 'https://youtube.com/@bigdroc' }
         ]
       }
@@ -720,6 +985,7 @@
         b.type = 'button';
         b.dataset.id = r.id;
         b.textContent = r.title;
+        b.setAttribute('role', 'tab');
         b.addEventListener('click', () => setActiveRelease(r.id));
         tabs.appendChild(b);
       });
@@ -727,15 +993,15 @@
       const cards = document.getElementById('releaseCards');
       cards.innerHTML = '';
       RELEASES.forEach(r => {
-        const card = document.createElement('div');
+        const card = document.createElement('article');
         card.className = 'release-card';
 
         const thumbSrc = r.cover ? r.cover : PLACEHOLDER_SVG(r.title);
 
         card.innerHTML = `
-          <div class='thumb'><img alt='${r.title} cover' src='${thumbSrc}' onerror="this.src='${PLACEHOLDER_SVG(r.title)}'" /></div>
+          <div class='thumb'><img alt='${r.title} cover' src='${thumbSrc}' onerror="this.src='${PLACEHOLDER_SVG(r.title)}'" loading="lazy" /></div>
           <div>
-            <div class='r-title'>${r.title}</div>
+            <h3 class='r-title'>${r.title}</h3>
             <div class='r-sub'>${r.meta}</div>
             <div class='r-actions'>
               <a class='mini' href='${safeHref((r.primaryCtas?.[0]||{}).href)}' target='_blank' rel='noopener noreferrer'>Open</a>
@@ -757,6 +1023,21 @@
       const start = RELEASES.some(r => r.id === hash) ? hash : RELEASES[0].id;
       setActiveRelease(start);
     }
+
+    // Newsletter form handler
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input').value;
+      const status = document.getElementById('newsletterStatus');
+
+      // For now, just show a success message
+      // You can connect this to your email service later
+      status.textContent = '🎉 Thanks for subscribing! Stay tuned for updates.';
+      this.querySelector('input').value = '';
+
+      // Optional: Send to your backend or email service
+      // fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({ email }) });
+    });
 
     buildUI();
   </script>
