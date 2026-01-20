@@ -288,7 +288,8 @@
     <script>
         const SUPABASE_URL = 'https://skytldwvwkfulytqnuac.supabase.co';
         const SUPABASE_KEY = 'sb_publishable_3pwfy4YCOqGYsBNtWupSVw_ziIAyjh2';
-        const supabase = libsupabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        const { createClient } = window.supabase;
+        const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
         async function init() {
             // Email Capture
