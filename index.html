@@ -237,6 +237,110 @@
             box-shadow: 0 0 30px rgba(124, 58, 237, 0.8);
         }
 
+        /* Latest Release */
+        .release-card {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .release-artwork {
+            flex-shrink: 0;
+            width: 250px;
+            height: 250px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(138, 43, 226, 0.4);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .release-artwork img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .release-info {
+            flex: 1;
+        }
+
+        .release-label {
+            color: var(--purple);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+
+        .release-title {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .release-artist {
+            color: var(--muted);
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        .stream-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .stream-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .stream-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .stream-btn.spotify {
+            background: #1DB954;
+            color: white;
+        }
+
+        .stream-btn.apple {
+            background: linear-gradient(135deg, #fc3c44, #fa2d55);
+            color: white;
+        }
+
+        .stream-btn.itunes {
+            background: linear-gradient(135deg, #a855f7, #6366f1);
+            color: white;
+        }
+
+        .stream-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 768px) {
+            .release-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .release-artwork {
+                width: 200px;
+                height: 200px;
+            }
+            .stream-links {
+                justify-content: center;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero-title { font-size: 2.5rem; }
             .email-form { flex-direction: column; }
@@ -255,6 +359,35 @@
             <h2 class="cinzel">Play the Purple Chalk Experience</h2>
             <p>Step into the noir mystery. Investigate the case. Uncover the truth behind the chalk outlines.</p>
             <a href="https://www.purplechalked.com" target="_blank" class="game-button">START THE CASE</a>
+        </section>
+
+        <!-- Latest Release -->
+        <section class="section">
+            <h2 class="section-title cinzel">Latest Release</h2>
+            <div class="release-card">
+                <div class="release-artwork">
+                    <img src="https://i.scdn.co/image/ab67616d0000b37338ab950d59283336bdbc630e" alt="My Worst Inner Me - Album Art">
+                </div>
+                <div class="release-info">
+                    <div class="release-label">New Single</div>
+                    <h3 class="release-title cinzel">My Worst Inner Me</h3>
+                    <p class="release-artist">D RoC</p>
+                    <div class="stream-links">
+                        <a href="https://open.spotify.com/album/6rsJRpLk9hs3cJdHGqae3S" target="_blank" class="stream-btn spotify">
+                            <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                            Spotify
+                        </a>
+                        <a href="https://music.apple.com/us/album/my-worst-inner-me-single/1871912007" target="_blank" class="stream-btn apple">
+                            <svg viewBox="0 0 24 24"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.99c-.042.003-.083.01-.124.013-.5.032-.999.09-1.486.196-.89.2-1.68.568-2.362 1.134-.88.727-1.466 1.64-1.77 2.735-.138.5-.21 1.013-.242 1.535a12.14 12.14 0 00-.012.363v11.086c.003.084.01.168.013.252.033.563.1 1.12.252 1.665.31 1.11.89 2.035 1.783 2.764a5.058 5.058 0 001.99.82c.423.09.854.14 1.287.156.138.006.276.013.415.013h12.07c.083-.003.166-.01.25-.013.474-.03.943-.085 1.4-.19a4.946 4.946 0 002.32-1.234c.78-.732 1.3-1.625 1.58-2.663.127-.47.196-.952.228-1.44.01-.136.017-.273.017-.412V6.124zm-6.73 11.8c-.067.012-.132.023-.197.037a2.726 2.726 0 01-.818.04 2.17 2.17 0 01-.937-.333 2.092 2.092 0 01-.737-.772 2.168 2.168 0 01-.263-.932 2.243 2.243 0 01.188-1.015c.18-.39.455-.707.807-.942.357-.24.762-.39 1.188-.442.253-.03.503-.02.753.014.088.012.176.025.263.044v-.714c0-.227-.003-.453.003-.68a.32.32 0 00-.1-.252.35.35 0 00-.255-.08c-.068.004-.133.02-.198.036-.227.055-.453.112-.68.168-.743.183-1.487.366-2.23.55a.296.296 0 00-.24.293c-.006.428-.003.854-.003 1.282v4.75c0 .082.002.165-.007.246a2.12 2.12 0 01-.342 1.003 2.016 2.016 0 01-.777.68 2.23 2.23 0 01-.784.244 2.588 2.588 0 01-.832-.013 2.032 2.032 0 01-.932-.44 1.768 1.768 0 01-.535-.775 2.08 2.08 0 01-.116-.74 2.06 2.06 0 01.215-.935c.2-.393.492-.71.862-.94.37-.233.78-.375 1.215-.425.283-.033.564-.022.846.01.046.006.093.013.14.022V9.623c0-.14.003-.283-.006-.423a.295.295 0 00-.236-.28c-.045-.012-.092-.02-.138-.03l-1.59-.392c-.862-.212-1.723-.426-2.585-.637a.306.306 0 00-.362.286c-.007.087-.005.175-.005.263v7.254c0 .162.005.324-.006.485a2.28 2.28 0 01-.227.862 2.08 2.08 0 01-.63.745 2.172 2.172 0 01-.868.39 2.537 2.537 0 01-.902.04 2.04 2.04 0 01-.887-.35 1.838 1.838 0 01-.61-.693 2.037 2.037 0 01-.197-.918c.005-.363.096-.704.277-1.017.2-.346.477-.62.82-.822.358-.21.748-.334 1.16-.375.273-.027.545-.02.817.014.048.006.096.014.143.02V8.39c0-.124 0-.247.006-.37a.298.298 0 01.208-.278c.102-.033.206-.06.31-.087l2.537-.627c1.088-.268 2.176-.538 3.264-.805.17-.04.34-.084.512-.118a.312.312 0 01.372.296c.008.12.005.24.005.36V17.92z"/></svg>
+                            Apple Music
+                        </a>
+                        <a href="https://music.apple.com/us/album/my-worst-inner-me-single/1871912007?app=itunes" target="_blank" class="stream-btn itunes">
+                            <svg viewBox="0 0 24 24"><path d="M11.977 23.999c-2.483-.007-4.83-.79-6.614-2.202-.466-.37-.86-.753-1.271-1.243l-.157-.188.36-.304c.198-.167.91-.77 1.582-1.34l1.222-1.036.144.163c.586.662 1.32 1.248 2.04 1.63 1.946 1.033 4.178 1.027 5.81-.013.738-.47 1.178-1.072 1.38-1.888.182-.738.093-1.466-.26-2.14-.455-.862-1.248-1.46-3.127-2.358-2.256-1.08-3.394-1.835-4.345-2.88-.62-.682-1.055-1.47-1.317-2.39-.17-.594-.2-.778-.207-1.263-.01-.564.024-.867.156-1.404.536-2.177 2.218-3.894 4.417-4.51.617-.174 1.052-.232 1.738-.232.687 0 1.14.06 1.765.234 1.067.296 2.058.848 2.915 1.62l.287.26-.652.747c-.358.41-.805.923-1.09 1.25l-.45.517-.144-.17c-.69-.81-1.59-1.345-2.56-1.52-.59-.106-1.344-.064-1.862.104-1.12.363-1.87 1.26-2.043 2.444-.087.586.03 1.27.314 1.83.398.783 1.1 1.395 2.558 2.23.928.532 1.593.943 2.162 1.337 1.203.833 2.032 1.628 2.602 2.49.583.884.91 1.83 1.02 2.95.042.42.023 1.267-.038 1.672-.265 1.772-1.064 3.242-2.388 4.396-.86.75-1.95 1.334-3.088 1.656-.668.188-1.3.286-2.09.32-.233.01-.874.008-1.088-.003z"/></svg>
+                            iTunes
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="section" id="hero">
