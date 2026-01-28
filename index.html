@@ -424,6 +424,13 @@
         const SUPABASE_URL = 'https://skytldwvwkfulytqnuac.supabase.co';
         const SUPABASE_KEY = 'sb_publishable_3pwfy4YCOqGYsBNtWupSVw_ziIAyjh2';
         
+        // Helper function to sanitize text for safe HTML insertion
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
         let supabase = null;
         try {
             const { createClient } = window.supabase;
@@ -442,7 +449,7 @@
                 const email = emailForm.querySelector('input').value;
                 
                 if (!supabase) {
-                    emailMsg.textContent = 'Service unavailable. Please check back later or contact support.';
+                    emailMsg.textContent = 'Service unavailable. Please try again later.';
                     emailMsg.style.color = '#ff4444';
                     return;
                 }
@@ -472,7 +479,7 @@
             const roadmapGrid = document.getElementById('roadmapGrid');
             
             if (!supabase) {
-                roadmapGrid.innerHTML = `<div class="loading">Service temporarily unavailable. Please check your Supabase configuration.</div>`;
+                roadmapGrid.innerHTML = `<div class="loading">Service temporarily unavailable. Please try again later.</div>`;
             } else {
                 try {
                     const { data: tracks, error: tracksError } = await supabase
@@ -487,8 +494,8 @@
                     if (tracks && tracks.length > 0) {
                         roadmapGrid.innerHTML = tracks.map(track => `
                             <div class="track-item">
-                                <div class="track-name">${track.title || track.name}</div>
-                                <div class="track-status">${track.status || 'Released'}</div>
+                                <div class="track-name">${escapeHtml(track.title || track.name || '')}</div>
+                                <div class="track-status">${escapeHtml(track.status || 'Released')}</div>
                             </div>
                         `).join('');
                     } else {
@@ -504,7 +511,7 @@
             const photoGrid = document.getElementById('photoGrid');
             
             if (!supabase) {
-                photoGrid.innerHTML = `<div class="loading">Service temporarily unavailable. Please check your Supabase configuration.</div>`;
+                photoGrid.innerHTML = `<div class="loading">Service temporarily unavailable. Please try again later.</div>`;
             } else {
                 try {
                     const { data: posts, error: postsError } = await supabase
@@ -520,7 +527,7 @@
                     if (posts && posts.length > 0) {
                         photoGrid.innerHTML = posts.map(post => `
                             <div class="photo-item">
-                                <img src="${post.image_url || post.url}" alt="${post.caption || 'Photo'}" loading="lazy">
+                                <img src="${escapeHtml(post.image_url || post.url || '')}" alt="${escapeHtml(post.caption || 'Photo')}" loading="lazy">
                             </div>
                         `).join('');
                     } else {
