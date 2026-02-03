@@ -4,6 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Primary SEO -->
+  <title>D RoC | Official Hub - Daddy Frequency Productions</title>
+  <meta name="description" content="D RoC official hub. Stream I WANT IT ALL, HuSH, and more. Explore Purple Chalked, exclusive content, and all Daddy Frequency Productions projects." />
+  <meta name="keywords" content="D RoC, Daddy Frequency, I Want It All, HuSH, Dumb Bull in a China Shop, Purple Chalked, hip hop, rap, music, streaming" />
+  <meta name="author" content="D RoC / Daddy Frequency Productions" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://d_roc.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="D RoC Official Hub" />
+  <meta property="og:title" content="D RoC | Official Hub - Daddy Frequency Productions" />
+  <meta property="og:description" content="Stream I WANT IT ALL + HuSH. Explore Purple Chalked and all D RoC projects. Official music hub." />
+  <meta property="og:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F8880983--2444F019-2C92-4EA9-B4185819882EB848--0--1782671--C7ED20F13EF34741AEC681D2977C3CFF.png?fm=jpg&q=75&w=1200" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://d_roc.vercel.app/" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="D RoC | Official Hub - Daddy Frequency Productions" />
+  <meta name="twitter:description" content="Stream I WANT IT ALL + HuSH. Explore Purple Chalked and all D RoC projects." />
+  <meta name="twitter:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F8880983--2444F019-2C92-4EA9-B4185819882EB848--0--1782671--C7ED20F13EF34741AEC681D2977C3CFF.png?fm=jpg&q=75&w=1200" />
+  <meta name="twitter:creator" content="@bigdroc" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "D RoC",
+    "alternateName": "Daddy Frequency",
+    "description": "Hip-hop artist and producer. No soft drops. Just finished work, loud.",
+    "url": "https://d_roc.vercel.app/",
+    "genre": ["Hip Hop", "Rap"],
+    "sameAs": [
+      "https://www.instagram.com/_d_roc_",
+      "https://www.tiktok.com/@big.droc",
+      "https://youtube.com/@bigdroc",
+      "https://open.spotify.com/artist/YOUR_SPOTIFY_ID",
+      "https://purplechalked.com"
+    ],
+    "member": {
+      "@type": "Person",
+      "name": "D RoC"
+    }
+  }
+  </script>
   <title>D RoC | Official Hub</title>
   <meta name="description" content="D RoC — official release hub. Stream I WANT IT ALL + HuSH. Pre-save Dumb Bull in a China Shop." />
 
@@ -28,6 +80,7 @@
     :root {
       --gold: #d4af37;
       --red: #ff2a2a;
+      --purple: #8a2be2;
       --bg0: #070707;
       --bg1: #101010;
       --panel: rgba(0, 0, 0, 0.28);
@@ -38,6 +91,8 @@
       --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
       --radius: 18px;
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -158,6 +213,15 @@
     }
 
     .pill.ghost:hover { transform: translateY(-2px); }
+
+    .pill.purple {
+      background: linear-gradient(135deg, var(--purple) 0%, #5a189a 100%);
+      box-shadow: 0 10px 25px rgba(138,43,226,0.22);
+    }
+
+    .pill.purple:hover {
+      box-shadow: 0 14px 30px rgba(138,43,226,0.32);
+    }
 
     /* hero */
     .hero {
@@ -387,6 +451,20 @@
 
     .platform-card:hover::before { opacity: 0.12; }
 
+    .platform-card.purple-card {
+      background: linear-gradient(135deg, rgba(138,43,226,0.15) 0%, rgba(90,24,154,0.10) 100%);
+      border: 1px solid rgba(138,43,226,0.35);
+    }
+
+    .platform-card.purple-card::before {
+      background: linear-gradient(135deg, rgba(138,43,226,0.40), rgba(90,24,154,0.22));
+    }
+
+    .platform-card.purple-card:hover {
+      border-color: rgba(138,43,226,0.65);
+      box-shadow: 0 18px 45px rgba(138,43,226,0.18);
+    }
+
     .p-ico { font-size: 1.65rem; position: relative; z-index: 1; }
     .p-meta { position: relative; z-index: 1; }
     .p-name { font-weight: 900; letter-spacing: 0.3px; }
@@ -476,6 +554,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .footer-photo {
+      width: 100px;
+      height: 100px;
       gap: 16px;
       flex-wrap: wrap;
     }
@@ -487,6 +573,34 @@
       border: 3px solid rgba(212,175,55,0.9);
       box-shadow: 0 14px 40px rgba(212,175,55,0.16);
     }
+
+    .footer-text { text-align: center; }
+    .footer-text strong { color: var(--gold); font-size: 1.1rem; }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: color 160ms ease;
+    }
+
+    .footer-link:hover { color: var(--gold); }
+
+    .footer-copy {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
     .footer-text { text-align: center; }
 @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
@@ -500,6 +614,11 @@
       .brand { width: 100%; justify-content: center; }
       .top-actions { width: 100%; justify-content: center; }
       .brand .mark { font-size: 1.02rem; letter-spacing: 1.2px; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-input { min-width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
     }
 
 @media (prefers-reduced-motion: reduce) {
@@ -518,6 +637,96 @@
         <div class="mark"><span class="mark-d">D</span><span class="mark-roc">RoC</span></div>
         <div class="sub">Daddy Frequency • Official Hub</div>
       </div>
+      <nav class="top-actions" aria-label="Main navigation">
+        <a class="pill" href="#releases">🎧 Releases</a>
+        <a class="pill purple" href="https://purplechalked.com" target="_blank" rel="noopener noreferrer">🔮 Purple Chalked</a>
+        <a class="pill ghost" href="https://www.instagram.com/_d_roc_" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+        <a class="pill ghost" href="https://www.tiktok.com/@big.droc" target="_blank" rel="noopener noreferrer">📱 TikTok</a>
+        <a class="pill ghost" href="https://youtube.com/@bigdroc" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Featured release">
+        <div class="panel cover-wrap">
+          <div class="badge" id="heroBadge">Out Now</div>
+          <div class="cover">
+            <img id="heroCover" alt="Release cover" decoding="async" loading="eager" />
+          </div>
+        </div>
+
+        <div class="panel hero-copy">
+          <div class="release-switch" id="releaseTabs" role="tablist" aria-label="Release switcher"></div>
+
+          <h1 class="title" id="heroTitle">I WANT IT ALL</h1>
+          <div class="byline">
+            <span class="artist">D RoC</span>
+            <span id="heroMeta">Single • Out now</span>
+          </div>
+          <p class="desc" id="heroDesc">No soft drops. No filler. Just finished work, loud.</p>
+
+          <div class="cta-row" id="heroCtas"></div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Streaming platforms">
+        <h2 class="section-title" id="platformsTitle">Open this release</h2>
+        <div class="platforms" id="platformsGrid"></div>
+      </section>
+
+      <section class="section" id="projects" aria-label="Projects">
+        <h2 class="section-title">Explore My World</h2>
+        <div class="projects-grid">
+          <a href="https://purplechalked.com" target="_blank" rel="noopener noreferrer" class="project-card purple-chalk">
+            <span class="project-badge purple">Interactive Experience</span>
+            <h3 class="project-title">Purple Chalked</h3>
+            <p class="project-desc">Step into the noir mystery. Investigate the case. Uncover the truth behind the chalk outlines.</p>
+            <span class="project-cta">Enter the experience →</span>
+          </a>
+          <a href="https://mud-in-the-trap.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card mud-trap">
+            <span class="project-badge gold">Season Hub</span>
+            <h3 class="project-title">Mud in the Trap</h3>
+            <p class="project-desc">Track the season roadmap. Get notified on new drops and exclusive content.</p>
+            <span class="project-cta">View the roadmap →</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section" id="releases" aria-label="All releases">
+        <h2 class="section-title">All Releases</h2>
+        <div class="release-grid" id="releaseCards"></div>
+      </section>
+
+      <section class="section" id="subscribe" aria-label="Newsletter">
+        <div class="newsletter-box">
+          <h2 class="newsletter-title">Join the Movement</h2>
+          <p class="newsletter-desc">Get notified on new drops, exclusive content, and behind-the-scenes access.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address" />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+          <div class="newsletter-status" id="newsletterStatus" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-row">
+        <img class="footer-photo" src="artist-photo.jpeg" alt="D RoC artist photo" loading="lazy" decoding="async" />
+        <div class="footer-text">
+          <div><strong>DADDY FREQUENCY PRODUCTIONS</strong></div>
+          <div style="margin-top:6px; color: var(--muted2);">No soft drops. Just finished work, loud.</div>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a class="footer-link" href="#releases">Releases</a>
+        <a class="footer-link" href="#projects">Projects</a>
+        <a class="footer-link" href="https://purplechalked.com" target="_blank" rel="noopener noreferrer">Purple Chalked</a>
+        <a class="footer-link" href="https://www.instagram.com/_d_roc_" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="footer-link" href="https://www.tiktok.com/@big.droc" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a class="footer-link" href="https://youtube.com/@bigdroc" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </nav>
+      <p class="footer-copy">© 2026 D RoC / Daddy Frequency Productions. All rights reserved.</p>
       <div class="top-actions">
         <a class="pill" href="#releases">🎧 Releases</a>
         <a class="pill ghost" href="https://www.instagram.com/_d_roc_" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
@@ -570,6 +779,7 @@
   </div>
 
   <script>
+    const SOCIALS = {
     // --- Covers are referenced as local files in the same folder as this index.html ---
 
   const SOCIALS = {
@@ -602,6 +812,8 @@
         badge: 'OUT NOW',
         title: 'HUSH',
         meta: 'Single • Live',
+        desc: 'Quiet doesn\'t mean soft.',
+        cover: 'hush.jpeg',
         desc: 'Quiet doesn’t mean soft.',
         cover: 'hush.jpg',
         primaryCtas: [
@@ -611,6 +823,7 @@
         ],
         platforms: [
           { icon: '🎵', name: 'Spotify', cta: 'Stream now →', href: 'https://open.spotify.com/album/3qLxOdcaEBBUDN14kdH5h4' },
+          { icon: '🍎', name: 'Apple Music', cta: 'Coming soon →', href: '#' },
           { icon: '🍎', name: 'Apple Music', cta: 'Link needed →', href: '#' },
           { icon: '▶️', name: 'YouTube', cta: 'Watch + subscribe →', href: 'https://youtube.com/@bigdroc' }
         ]
@@ -627,6 +840,7 @@
           { label: '▶️ YouTube', href: 'https://youtube.com/@bigdroc' }
         ],
         platforms: [
+          { icon: '⭐', name: 'Pre-save', cta: 'Coming soon →', href: '#' },
           { icon: '⭐', name: 'Pre-save', cta: 'Placeholder →', href: '#' },
           { icon: '▶️', name: 'YouTube', cta: 'Watch + subscribe →', href: 'https://youtube.com/@bigdroc' }
         ]
@@ -720,6 +934,7 @@
         b.type = 'button';
         b.dataset.id = r.id;
         b.textContent = r.title;
+        b.setAttribute('role', 'tab');
         b.addEventListener('click', () => setActiveRelease(r.id));
         tabs.appendChild(b);
       });
@@ -727,12 +942,16 @@
       const cards = document.getElementById('releaseCards');
       cards.innerHTML = '';
       RELEASES.forEach(r => {
+        const card = document.createElement('article');
         const card = document.createElement('div');
         card.className = 'release-card';
 
         const thumbSrc = r.cover ? r.cover : PLACEHOLDER_SVG(r.title);
 
         card.innerHTML = `
+          <div class='thumb'><img alt='${r.title} cover' src='${thumbSrc}' onerror="this.src='${PLACEHOLDER_SVG(r.title)}'" loading="lazy" /></div>
+          <div>
+            <h3 class='r-title'>${r.title}</h3>
           <div class='thumb'><img alt='${r.title} cover' src='${thumbSrc}' onerror="this.src='${PLACEHOLDER_SVG(r.title)}'" /></div>
           <div>
             <div class='r-title'>${r.title}</div>
@@ -757,6 +976,21 @@
       const start = RELEASES.some(r => r.id === hash) ? hash : RELEASES[0].id;
       setActiveRelease(start);
     }
+
+    // Newsletter form handler
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input').value;
+      const status = document.getElementById('newsletterStatus');
+
+      // For now, just show a success message
+      // You can connect this to your email service later
+      status.textContent = '🎉 Thanks for subscribing! Stay tuned for updates.';
+      this.querySelector('input').value = '';
+
+      // Optional: Send to your backend or email service
+      // fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({ email }) });
+    });
 
     buildUI();
   </script>
