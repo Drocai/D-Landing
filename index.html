@@ -56,6 +56,19 @@
     }
   }
   </script>
+  <title>D RoC | Official Hub</title>
+  <meta name="description" content="D RoC — official release hub. Stream I WANT IT ALL + HuSH. Pre-save Dumb Bull in a China Shop." />
+
+  <!-- Open Graph (static preview for link shares) -->
+  <meta property="og:title" content="D RoC | Official Hub" />
+  <meta property="og:description" content="Stream I WANT IT ALL + HuSH. Pre-save Dumb Bull in a China Shop." />
+  <meta property="og:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F8880983--2444F019-2C92-4EA9-B4185819882EB848--0--1782671--C7ED20F13EF34741AEC681D2977C3CFF.png?fm=jpg&q=75&w=1200" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="D RoC | Official Hub" />
+  <meta name="twitter:description" content="Stream I WANT IT ALL + HuSH. Pre-save Dumb Bull in a China Shop." />
+  <meta name="twitter:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F8880983--2444F019-2C92-4EA9-B4185819882EB848--0--1782671--C7ED20F13EF34741AEC681D2977C3CFF.png?fm=jpg&q=75&w=1200" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -92,6 +105,7 @@
       overflow-x: hidden;
     }
 
+    /* WebGL background */
     #bg {
       position: fixed;
       inset: 0;
@@ -102,6 +116,7 @@
       opacity: 0.95;
     }
 
+    /* vignette */
     body::before {
       content: '';
       position: fixed;
@@ -208,6 +223,7 @@
       box-shadow: 0 14px 30px rgba(138,43,226,0.32);
     }
 
+    /* hero */
     .hero {
       margin-top: 18px;
       display: grid;
@@ -243,6 +259,7 @@
       transform: scale(1.01);
     }
 
+    /* light sweep */
     .cover::before {
       content: '';
       position: absolute;
@@ -507,167 +524,32 @@
       border: 1px solid rgba(255,255,255,0.14);
     }
 
-    /* Projects Section */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-    }
-
-    .project-card {
-      padding: 24px;
-      border-radius: var(--radius);
-      text-decoration: none;
-      color: var(--text);
-      transition: transform 200ms ease, box-shadow 200ms ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .project-card.purple-chalk {
-      background: linear-gradient(135deg, rgba(138,43,226,0.20) 0%, rgba(90,24,154,0.15) 100%);
-      border: 1px solid rgba(138,43,226,0.35);
-    }
-
-    .project-card.purple-chalk:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 50px rgba(138,43,226,0.25);
-      border-color: rgba(138,43,226,0.55);
-    }
-
-    .project-card.mud-trap {
-      background: linear-gradient(135deg, rgba(212,175,55,0.15) 0%, rgba(139,90,43,0.12) 100%);
-      border: 1px solid rgba(212,175,55,0.30);
-    }
-
-    .project-card.mud-trap:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 50px rgba(212,175,55,0.20);
-      border-color: rgba(212,175,55,0.50);
-    }
-
-    .project-badge {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-size: 0.72rem;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .project-badge.purple { background: rgba(138,43,226,0.30); color: #c084fc; }
-    .project-badge.gold { background: rgba(212,175,55,0.30); color: var(--gold); }
-
-    .project-title {
-      font-size: 1.35rem;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    .project-desc {
-      color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
-
-    .project-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 900;
-      font-size: 0.9rem;
-    }
-
-    .project-card.purple-chalk .project-cta { color: #c084fc; }
-    .project-card.mud-trap .project-cta { color: var(--gold); }
-
-    /* Newsletter Section */
-    .newsletter-box {
-      padding: 32px;
-      border-radius: var(--radius);
-      background: linear-gradient(135deg, rgba(212,175,55,0.08) 0%, rgba(255,42,42,0.05) 100%);
-      border: 1px solid rgba(212,175,55,0.20);
-      text-align: center;
-    }
-
-    .newsletter-title {
-      font-size: 1.5rem;
-      font-weight: 900;
-      margin-bottom: 8px;
-      background: linear-gradient(135deg, var(--gold), var(--red));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .newsletter-desc {
-      color: var(--muted);
-      margin-bottom: 20px;
-      font-size: 1rem;
-    }
-
-    .newsletter-form {
-      display: flex;
-      gap: 12px;
-      max-width: 480px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .newsletter-input {
-      flex: 1;
-      min-width: 220px;
-      padding: 14px 18px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(0,0,0,0.40);
-      color: var(--text);
-      font-size: 1rem;
-      font-family: inherit;
-      outline: none;
-      transition: border-color 160ms ease;
-    }
-
-    .newsletter-input::placeholder { color: var(--muted2); }
-    .newsletter-input:focus { border-color: var(--gold); }
-
-    .newsletter-btn {
-      padding: 14px 24px;
-      border-radius: 12px;
-      border: none;
-      background: linear-gradient(135deg, var(--gold), var(--red));
-      color: #0b0b0b;
-      font-weight: 900;
-      font-size: 1rem;
-      font-family: inherit;
-      cursor: pointer;
-      transition: transform 160ms ease, filter 160ms ease;
-    }
-
-    .newsletter-btn:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.08);
-    }
-
-    .newsletter-status {
-      margin-top: 12px;
-      font-size: 0.9rem;
-      color: var(--gold);
-      min-height: 24px;
-    }
-
-    /* Footer */
     .footer {
-      margin-top: 48px;
-      padding: 32px 16px;
+      margin-top: 34px;
+      padding: 22px 10px;
       text-align: center;
+      color: rgba(255,255,255,0.42);
       border-top: 1px solid rgba(255,255,255,0.08);
     }
 
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .artist-photo{
+      width:120px;
+      height:120px;
+      border-radius:999px;
+      object-fit:cover;
+      border:3px solid rgba(212,175,55,0.9);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+    }
+    .footer strong { color: rgba(212,175,55,0.9); }
+
+    
     .footer-row {
       display: flex;
       align-items: center;
@@ -680,6 +562,12 @@
     .footer-photo {
       width: 100px;
       height: 100px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-photo {
+      width: 120px;
+      height: 120px;
       border-radius: 999px;
       object-fit: cover;
       border: 3px solid rgba(212,175,55,0.9);
@@ -713,11 +601,14 @@
     }
 
     @media (max-width: 900px) {
+    .footer-text { text-align: center; }
+@media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
       .title { font-size: 2.25rem; }
       .top-actions { justify-content: flex-start; }
     }
 
+    
     @media (max-width: 520px) {
       .topbar { flex-wrap: wrap; }
       .brand { width: 100%; justify-content: center; }
@@ -728,6 +619,9 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+    }
+
+@media (prefers-reduced-motion: reduce) {
       .cover::before { display: none; }
       * { scroll-behavior: auto !important; }
     }
@@ -833,11 +727,62 @@
         <a class="footer-link" href="https://youtube.com/@bigdroc" target="_blank" rel="noopener noreferrer">YouTube</a>
       </nav>
       <p class="footer-copy">© 2026 D RoC / Daddy Frequency Productions. All rights reserved.</p>
+      <div class="top-actions">
+        <a class="pill" href="#releases">🎧 Releases</a>
+        <a class="pill ghost" href="https://www.instagram.com/_d_roc_" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+        <a class="pill ghost" href="https://www.tiktok.com/@big.droc" target="_blank" rel="noopener noreferrer">📱 TikTok</a>
+        <a class="pill ghost" href="https://youtube.com/@bigdroc" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="panel cover-wrap">
+        <div class="badge" id="heroBadge">Out Now</div>
+        <div class="cover">
+          <img id="heroCover" alt="Release cover" decoding="async" loading="eager" />
+        </div>
+      </div>
+
+      <div class="panel hero-copy">
+        <div class="release-switch" id="releaseTabs" aria-label="Release switcher"></div>
+
+        <h1 class="title" id="heroTitle">I WANT IT ALL</h1>
+        <div class="byline">
+          <span class="artist">D RoC</span>
+          <span id="heroMeta">Single • Out now</span>
+        </div>
+        <p class="desc" id="heroDesc">No soft drops. No filler. Just finished work, loud.</p>
+
+        <div class="cta-row" id="heroCtas"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Streaming platforms">
+      <div class="section-title" id="platformsTitle">Open this release</div>
+      <div class="platforms" id="platformsGrid"></div>
+    </section>
+
+    <section class="section" id="releases" aria-label="All releases">
+      <div class="section-title">All releases</div>
+      <div class="release-grid" id="releaseCards"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-row">
+        <img class="footer-photo" src="artist-photo.jpg" alt="D RoC artist photo" loading="lazy" decoding="async" />
+        <div class="footer-text">
+          <div><strong>DADDY FREQUENCY PRODUCTIONS</strong></div>
+          <div style="margin-top:8px;">© 2026 D RoC. All rights reserved.</div>
+        </div>
+      </div>
     </footer>
   </div>
 
   <script>
     const SOCIALS = {
+    // --- Covers are referenced as local files in the same folder as this index.html ---
+
+  const SOCIALS = {
       instagram: 'https://www.instagram.com/_d_roc_',
       tiktok: 'https://www.tiktok.com/@big.droc',
       youtube: 'https://youtube.com/@bigdroc'
@@ -869,6 +814,8 @@
         meta: 'Single • Live',
         desc: 'Quiet doesn\'t mean soft.',
         cover: 'hush.jpeg',
+        desc: 'Quiet doesn’t mean soft.',
+        cover: 'hush.jpg',
         primaryCtas: [
           { label: '🎧 Spotify', href: 'https://open.spotify.com/album/3qLxOdcaEBBUDN14kdH5h4' },
           { label: '🍎 Apple Music', href: '#' },
@@ -877,6 +824,7 @@
         platforms: [
           { icon: '🎵', name: 'Spotify', cta: 'Stream now →', href: 'https://open.spotify.com/album/3qLxOdcaEBBUDN14kdH5h4' },
           { icon: '🍎', name: 'Apple Music', cta: 'Coming soon →', href: '#' },
+          { icon: '🍎', name: 'Apple Music', cta: 'Link needed →', href: '#' },
           { icon: '▶️', name: 'YouTube', cta: 'Watch + subscribe →', href: 'https://youtube.com/@bigdroc' }
         ]
       },
@@ -893,6 +841,7 @@
         ],
         platforms: [
           { icon: '⭐', name: 'Pre-save', cta: 'Coming soon →', href: '#' },
+          { icon: '⭐', name: 'Pre-save', cta: 'Placeholder →', href: '#' },
           { icon: '▶️', name: 'YouTube', cta: 'Watch + subscribe →', href: 'https://youtube.com/@bigdroc' }
         ]
       }
@@ -994,6 +943,7 @@
       cards.innerHTML = '';
       RELEASES.forEach(r => {
         const card = document.createElement('article');
+        const card = document.createElement('div');
         card.className = 'release-card';
 
         const thumbSrc = r.cover ? r.cover : PLACEHOLDER_SVG(r.title);
@@ -1002,6 +952,9 @@
           <div class='thumb'><img alt='${r.title} cover' src='${thumbSrc}' onerror="this.src='${PLACEHOLDER_SVG(r.title)}'" loading="lazy" /></div>
           <div>
             <h3 class='r-title'>${r.title}</h3>
+          <div class='thumb'><img alt='${r.title} cover' src='${thumbSrc}' onerror="this.src='${PLACEHOLDER_SVG(r.title)}'" /></div>
+          <div>
+            <div class='r-title'>${r.title}</div>
             <div class='r-sub'>${r.meta}</div>
             <div class='r-actions'>
               <a class='mini' href='${safeHref((r.primaryCtas?.[0]||{}).href)}' target='_blank' rel='noopener noreferrer'>Open</a>
