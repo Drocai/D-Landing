@@ -713,6 +713,28 @@
       font-size: 0.85rem;
     }
 
+    .footer-contact {
+      text-align: center;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-contact p {
+      color: var(--muted2);
+      font-size: 0.9rem;
+    }
+
+    .footer-contact a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 160ms ease;
+    }
+
+    .footer-contact a:hover {
+      color: var(--red);
+    }
+
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
       .title { font-size: 2.25rem; }
@@ -782,7 +804,7 @@
       </section>
 
       <section class="section" id="projects" aria-label="Projects">
-        <h2 class="section-title">Explore My World</h2>
+        <h2 class="section-title">Projects & Experiences</h2>
         <div class="projects-grid">
           <a href="https://purplechalked.com" target="_blank" rel="noopener noreferrer" class="project-card purple-chalk">
             <span class="project-badge purple">Interactive Experience</span>
@@ -807,10 +829,10 @@
       <section class="section" id="subscribe" aria-label="Newsletter">
         <div class="newsletter-box">
           <h2 class="newsletter-title">Join the Movement</h2>
-          <p class="newsletter-desc">Get notified on new drops, exclusive content, and behind-the-scenes access.</p>
+          <p class="newsletter-desc">Get notified on new drops and exclusive content. No spam, just signal.</p>
           <form class="newsletter-form" id="newsletterForm">
             <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address" />
-            <button type="submit" class="newsletter-btn">Subscribe</button>
+            <button type="submit" class="newsletter-btn">Notify Me</button>
           </form>
           <div class="newsletter-status" id="newsletterStatus" aria-live="polite"></div>
         </div>
@@ -825,6 +847,9 @@
           <div style="margin-top:6px; color: var(--muted2);">No soft drops. Just finished work, loud.</div>
         </div>
       </div>
+      <div class="footer-contact">
+        <p>Press, sync, or booking: <a href="mailto:daddyfrequency@proton.me">daddyfrequency@proton.me</a></p>
+      </div>
       <nav class="footer-links" aria-label="Footer navigation">
         <a class="footer-link" href="#releases">Releases</a>
         <a class="footer-link" href="#projects">Projects</a>
@@ -833,7 +858,7 @@
         <a class="footer-link" href="https://www.tiktok.com/@big.droc" target="_blank" rel="noopener noreferrer">TikTok</a>
         <a class="footer-link" href="https://youtube.com/@bigdroc" target="_blank" rel="noopener noreferrer">YouTube</a>
       </nav>
-      <p class="footer-copy">© 2026 D RoC / Daddy Frequency Productions. All rights reserved.</p>
+      <p class="footer-copy">© 2026 D RoC / Daddy Frequency Productions. All rights reserved.<br><span style="font-size:0.8rem;">Independent artist. All rights owned.</span></p>
     </footer>
   </div>
 
