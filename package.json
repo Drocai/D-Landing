@@ -1,15 +1,21 @@
 {
-  "name": "mud-in-trap-clean",
+  "name": "d-landing",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "D RoC Official Hub",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@supabase/supabase-js": "^2.90.1"
-  }
+  "devDependencies": {
+    "@testing-library/dom": "^10.0.0",
+    "@vitest/coverage-v8": "^2.0.0",
+    "jsdom": "^24.0.0",
+    "vitest": "^2.0.0"
+  },
+  "keywords": ["music", "landing-page", "d-roc"],
+  "author": "D RoC",
+  "license": "ISC"
 }

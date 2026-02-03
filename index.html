@@ -1,552 +1,1160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D RoC | Daddy Frequency - Official Music Hub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="D RoC - Daddy Frequency Productions. Stream the latest tracks, join the movement, and experience the Purple Chalk game.">
-    <meta name="keywords" content="D RoC, Daddy Frequency, trap music, I Want It All, Hush, Purple Chalk">
-    <meta name="author" content="D RoC">
+  <!-- Primary SEO -->
+  <title>D RoC | Official Hub - Daddy Frequency Productions</title>
+  <meta name="description" content="D RoC official hub. Stream I WANT IT ALL, HuSH, and more. Explore Purple Chalked, exclusive content, and all Daddy Frequency Productions projects." />
+  <meta name="keywords" content="D RoC, Daddy Frequency, I Want It All, HuSH, Dumb Bull in a China Shop, Purple Chalked, hip hop, rap, music, streaming" />
+  <meta name="author" content="D RoC / Daddy Frequency Productions" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://d-roc.vercel.app/" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://d-roc.vercel.app/">
-    <meta property="og:title" content="D RoC | Daddy Frequency - Official Music Hub">
-    <meta property="og:description" content="Stream the latest tracks, join the movement, and experience the Purple Chalk game.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="D RoC Official Hub" />
+  <meta property="og:title" content="D RoC | Official Hub - Daddy Frequency Productions" />
+  <meta property="og:description" content="Stream I WANT IT ALL + HuSH. Explore Purple Chalked and all D RoC projects. Official music hub." />
+  <meta property="og:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F8880983--2444F019-2C92-4EA9-B4185819882EB848--0--1782671--C7ED20F13EF34741AEC681D2977C3CFF.png?fm=jpg&q=75&w=1200" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://d-roc.vercel.app/" />
+  <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="D RoC | Daddy Frequency - Official Music Hub">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="D RoC | Official Hub - Daddy Frequency Productions" />
+  <meta name="twitter:description" content="Stream I WANT IT ALL + HuSH. Explore Purple Chalked and all D RoC projects." />
+  <meta name="twitter:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F8880983--2444F019-2C92-4EA9-B4185819882EB848--0--1782671--C7ED20F13EF34741AEC681D2977C3CFF.png?fm=jpg&q=75&w=1200" />
+  <meta name="twitter:creator" content="@bigdroc" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --gold: #d4af37;
-            --purple: #8a2be2;
-            --bg: #050505;
-            --panel: rgba(20, 20, 20, 0.8);
-            --text: #ffffff;
-            --muted: rgba(255, 255, 255, 0.6);
-        }
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>" />
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "D RoC",
+    "alternateName": "Daddy Frequency",
+    "description": "Hip-hop artist and producer. No soft drops. Just finished work, loud.",
+    "url": "https://d-roc.vercel.app/",
+    "genre": ["Hip Hop", "Rap"],
+    "sameAs": [
+      "https://www.instagram.com/_d_roc_",
+      "https://www.tiktok.com/@big.droc",
+      "https://youtube.com/@bigdroc",
+      "https://open.spotify.com/artist/YOUR_SPOTIFY_ID",
+      "https://purplechalked.com"
+    ],
+    "member": {
+      "@type": "Person",
+      "name": "D RoC"
+    }
+  }
+  </script>
 
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
-            min-height: 100vh;
-            overflow-x: hidden;
-            background-image: 
-                linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
-                url('https://images.unsplash.com/photo-1506466010722-395aa2bef877?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
-        /* Purple Waterfall Glow */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 50% -20%, rgba(138, 43, 226, 0.5), transparent 70%);
-            pointer-events: none;
-            z-index: 1;
-        }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        h1, h2, h3, .cinzel {
-            font-family: 'Cinzel', serif;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    :root {
+      --gold: #d4af37;
+      --red: #ff2a2a;
+      --purple: #8a2be2;
+      --bg0: #070707;
+      --bg1: #101010;
+      --panel: rgba(0, 0, 0, 0.28);
+      --line: rgba(212, 175, 55, 0.22);
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.72);
+      --muted2: rgba(255, 255, 255, 0.56);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+      --radius: 18px;
+    }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
-            z-index: 2;
-        }
+    html { scroll-behavior: smooth; }
 
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background:
+        radial-gradient(1200px 800px at 20% 0%, rgba(212,175,55,0.12), transparent 55%),
+        radial-gradient(900px 700px at 80% 15%, rgba(255,42,42,0.10), transparent 55%),
+        linear-gradient(135deg, var(--bg0) 0%, var(--bg1) 100%);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-        .hero-title {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-        }
+    #bg {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      opacity: 0.95;
+    }
 
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--muted);
-            letter-spacing: 4px;
-        }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background:
+        radial-gradient(1000px 650px at 50% 20%, rgba(255,255,255,0.06), transparent 60%),
+        radial-gradient(1200px 900px at 50% 80%, rgba(0,0,0,0.55), rgba(0,0,0,0.88));
+      opacity: 0.95;
+    }
 
-        .section {
-            margin-bottom: 80px;
-            background: var(--panel);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(138, 43, 226, 0.2);
-            backdrop-filter: blur(10px);
-        }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 22px 16px 86px;
+    }
 
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            border-bottom: 1px solid var(--purple);
-            display: inline-block;
-            padding-bottom: 10px;
-        }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,0.26);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
 
-        /* Email Capture */
-        .email-form {
-            display: flex;
-            gap: 15px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+    .brand {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: baseline;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
 
-        .email-input {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--purple);
-            padding: 15px 20px;
-            border-radius: 10px;
-            color: white;
-            font-size: 1rem;
-            outline: none;
-        }
+    .brand .mark {
+      display: inline-flex;
+      align-items: baseline;
+      flex-wrap: nowrap;
+      gap: 0.32ch;
+      white-space: nowrap;
+      font-size: 1.12rem;
+      background: linear-gradient(90deg, var(--gold) 0%, var(--red) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .mark-d, .mark-roc { white-space: nowrap; }
 
-        .email-submit {
-            background: linear-gradient(135deg, var(--purple), var(--gold));
-            border: none;
-            padding: 15px 30px;
-            border-radius: 10px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
+    .brand .sub {
+      font-weight: 700;
+      color: var(--muted2);
+      letter-spacing: 0.4px;
+      font-size: 0.92rem;
+    }
 
-        .email-submit:hover {
-            transform: scale(1.05);
-        }
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
-        .email-msg {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 0.9rem;
-            min-height: 1.2em;
-        }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 0.92rem;
+      text-decoration: none;
+      color: #0b0b0b;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--red) 100%);
+      box-shadow: 0 10px 25px rgba(212,175,55,0.22);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
 
-        /* Roadmap */
-        .roadmap-list {
-            display: grid;
-            gap: 15px;
-        }
+    .pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(212,175,55,0.32);
+    }
 
-        .track-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 10px;
-            border-left: 4px solid var(--gold);
-        }
+    .pill.ghost {
+      color: var(--text);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: none;
+    }
 
-        .track-name { font-weight: bold; font-size: 1.1rem; }
-        .track-status { color: var(--purple); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+    .pill.ghost:hover { transform: translateY(-2px); }
 
-        /* Photo Wall */
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
+    .pill.purple {
+      background: linear-gradient(135deg, var(--purple) 0%, #5a189a 100%);
+      box-shadow: 0 10px 25px rgba(138,43,226,0.22);
+    }
 
-        .photo-item {
-            aspect-ratio: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
+    .pill.purple:hover {
+      box-shadow: 0 14px 30px rgba(138,43,226,0.32);
+    }
 
-        .photo-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
+    .hero {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 26px;
+      align-items: center;
+    }
 
-        .photo-item:hover img {
-            transform: scale(1.1);
-        }
+    .panel {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      background: var(--panel);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
 
-        .loading {
-            text-align: center;
-            color: var(--muted);
-            padding: 20px;
-        }
+    .cover-wrap { position: relative; padding: 16px; }
 
-        /* Game CTA */
-        .game-cta {
-            text-align: center;
-            padding: 50px 40px;
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(79, 70, 229, 0.2));
-            border: 2px solid var(--purple);
-        }
+    .cover {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 18px 55px rgba(212,175,55,0.18), 0 0 0 1px rgba(212,175,55,0.10);
+    }
 
-        .game-cta h2 {
-            color: #c4b5fd;
-            margin-bottom: 15px;
-        }
+    .cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.01);
+    }
 
-        .game-cta p {
-            color: var(--muted);
-            margin-bottom: 25px;
-        }
+    .cover::before {
+      content: '';
+      position: absolute;
+      inset: -40%;
+      background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.16) 42%, transparent 55%);
+      transform: translateX(-60%) rotate(12deg);
+      animation: sweep 6.8s ease-in-out infinite;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      opacity: 0.75;
+    }
 
-        .game-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #7c3aed, #4f46e5);
-            color: white;
-            padding: 18px 40px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
-        }
+    @keyframes sweep {
+      0% { transform: translateX(-65%) rotate(12deg); opacity: 0.0; }
+      18% { opacity: 0.0; }
+      38% { opacity: 0.75; }
+      62% { opacity: 0.75; }
+      82% { opacity: 0.0; }
+      100% { transform: translateX(65%) rotate(12deg); opacity: 0.0; }
+    }
 
-        .game-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(124, 58, 237, 0.8);
-        }
+    .cover::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(700px 500px at 30% 20%, rgba(212,175,55,0.16), transparent 60%),
+        radial-gradient(700px 500px at 80% 70%, rgba(255,42,42,0.12), transparent 60%);
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
 
-        /* Latest Release */
-        .release-card {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
+    .badge {
+      position: absolute;
+      left: 26px;
+      top: 26px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-weight: 900;
+      letter-spacing: 1.3px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      background: rgba(0,0,0,0.55);
+      border: 1px solid rgba(212,175,55,0.30);
+      color: var(--gold);
+      backdrop-filter: blur(8px);
+    }
 
-        .release-artwork {
-            flex-shrink: 0;
-            width: 250px;
-            height: 250px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(138, 43, 226, 0.4);
-            border: 2px solid rgba(212, 175, 55, 0.3);
-        }
+    .hero-copy { padding: 22px; }
 
-        .release-artwork img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .release-switch {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
 
-        .release-info {
-            flex: 1;
-        }
+    .tab {
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-weight: 900;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+      user-select: none;
+    }
 
-        .release-label {
-            color: var(--purple);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 8px;
-        }
+    .tab:hover { transform: translateY(-1px); }
 
-        .release-title {
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 8px;
-        }
+    .tab.active {
+      background: linear-gradient(135deg, rgba(212,175,55,0.22), rgba(255,42,42,0.16));
+      border-color: rgba(212,175,55,0.45);
+    }
 
-        .release-artist {
-            color: var(--muted);
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-        }
+    .title {
+      font-size: 2.65rem;
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: 0.3px;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #fff 0%, var(--gold) 55%, var(--red) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-        .stream-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+    .byline {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-weight: 700;
+    }
 
-        .stream-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+    .byline .artist {
+      color: var(--gold);
+      font-weight: 900;
+      letter-spacing: 0.8px;
+    }
 
-        .stream-btn:hover {
-            transform: scale(1.05);
-        }
+    .desc {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 1.02rem;
+      margin-bottom: 18px;
+      max-width: 56ch;
+    }
 
-        .stream-btn.spotify {
-            background: #1DB954;
-            color: white;
-        }
+    .cta-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
 
-        .stream-btn.apple {
-            background: linear-gradient(135deg, #fc3c44, #fa2d55);
-            color: white;
-        }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 900;
+      color: #0b0b0b;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--red) 100%);
+      transition: transform 160ms ease, filter 160ms ease;
+    }
 
-        .stream-btn.itunes {
-            background: linear-gradient(135deg, #a855f7, #6366f1);
-            color: white;
-        }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.06); }
 
-        .stream-btn svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
+    .btn.secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
 
-        @media (max-width: 768px) {
-            .release-card {
-                flex-direction: column;
-                text-align: center;
-            }
-            .release-artwork {
-                width: 200px;
-                height: 200px;
-            }
-            .stream-links {
-                justify-content: center;
-            }
-        }
+    .section { margin-top: 28px; }
 
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
-            .email-form { flex-direction: column; }
-        }
-    </style>
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.84);
+      margin: 0 0 12px;
+    }
+
+    .platforms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .platform-card {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 16px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(212,175,55,0.10) 0%, rgba(255,42,42,0.05) 100%);
+      border: 1px solid rgba(212,175,55,0.25);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .platform-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(212,175,55,0.40), rgba(255,42,42,0.22));
+      opacity: 0;
+      transition: opacity 160ms ease;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(212,175,55,0.55);
+      box-shadow: 0 18px 45px rgba(212,175,55,0.14);
+    }
+
+    .platform-card:hover::before { opacity: 0.12; }
+
+    .platform-card.purple-card {
+      background: linear-gradient(135deg, rgba(138,43,226,0.15) 0%, rgba(90,24,154,0.10) 100%);
+      border: 1px solid rgba(138,43,226,0.35);
+    }
+
+    .platform-card.purple-card::before {
+      background: linear-gradient(135deg, rgba(138,43,226,0.40), rgba(90,24,154,0.22));
+    }
+
+    .platform-card.purple-card:hover {
+      border-color: rgba(138,43,226,0.65);
+      box-shadow: 0 18px 45px rgba(138,43,226,0.18);
+    }
+
+    .p-ico { font-size: 1.65rem; position: relative; z-index: 1; }
+    .p-meta { position: relative; z-index: 1; }
+    .p-name { font-weight: 900; letter-spacing: 0.3px; }
+    .p-cta { color: var(--muted2); font-weight: 700; font-size: 0.92rem; margin-top: 2px; }
+
+    .release-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .release-card {
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.22);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .thumb {
+      width: 96px;
+      height: 96px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(212,175,55,0.20), rgba(255,42,42,0.14));
+      border: 1px solid rgba(212,175,55,0.18);
+    }
+
+    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .r-title { font-weight: 900; letter-spacing: 0.4px; }
+    .r-sub { color: var(--muted2); font-weight: 700; font-size: 0.92rem; margin-top: 4px; }
+
+    .r-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+
+    .mini {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 11px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 0.9rem;
+      color: #0b0b0b;
+      background: linear-gradient(135deg, var(--gold), var(--red));
+    }
+
+    .mini.secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      display: block;
+      padding: 24px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 200ms ease, box-shadow 200ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card.purple-chalk {
+      background: linear-gradient(135deg, rgba(138,43,226,0.20) 0%, rgba(90,24,154,0.15) 100%);
+      border: 1px solid rgba(138,43,226,0.35);
+    }
+
+    .project-card.purple-chalk:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(138,43,226,0.25);
+      border-color: rgba(138,43,226,0.55);
+    }
+
+    .project-card.mud-trap {
+      background: linear-gradient(135deg, rgba(212,175,55,0.15) 0%, rgba(139,90,43,0.12) 100%);
+      border: 1px solid rgba(212,175,55,0.30);
+    }
+
+    .project-card.mud-trap:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(212,175,55,0.20);
+      border-color: rgba(212,175,55,0.50);
+    }
+
+    .project-badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .project-badge.purple { background: rgba(138,43,226,0.30); color: #c084fc; }
+    .project-badge.gold { background: rgba(212,175,55,0.30); color: var(--gold); }
+
+    .project-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .project-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .project-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    .project-card.purple-chalk .project-cta { color: #c084fc; }
+    .project-card.mud-trap .project-cta { color: var(--gold); }
+
+    /* Newsletter Section */
+    .newsletter-box {
+      padding: 32px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(212,175,55,0.08) 0%, rgba(255,42,42,0.05) 100%);
+      border: 1px solid rgba(212,175,55,0.20);
+      text-align: center;
+    }
+
+    .newsletter-title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, var(--gold), var(--red));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .newsletter-desc {
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      max-width: 480px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      min-width: 220px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(0,0,0,0.40);
+      color: var(--text);
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 160ms ease;
+    }
+
+    .newsletter-input::placeholder { color: var(--muted2); }
+    .newsletter-input:focus { border-color: var(--gold); }
+
+    .newsletter-btn {
+      padding: 14px 24px;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, var(--gold), var(--red));
+      color: #0b0b0b;
+      font-weight: 900;
+      font-size: 1rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: transform 160ms ease, filter 160ms ease;
+    }
+
+    .newsletter-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .newsletter-status {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--gold);
+      min-height: 24px;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 48px;
+      padding: 32px 16px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .footer-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 3px solid rgba(212,175,55,0.9);
+      box-shadow: 0 14px 40px rgba(212,175,55,0.16);
+    }
+
+    .footer-text { text-align: center; }
+    .footer-text strong { color: var(--gold); font-size: 1.1rem; }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: color 160ms ease;
+    }
+
+    .footer-link:hover { color: var(--gold); }
+
+    .footer-copy {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .title { font-size: 2.25rem; }
+      .top-actions { justify-content: flex-start; }
+    }
+
+    @media (max-width: 520px) {
+      .topbar { flex-wrap: wrap; }
+      .brand { width: 100%; justify-content: center; }
+      .top-actions { width: 100%; justify-content: center; }
+      .brand .mark { font-size: 1.02rem; letter-spacing: 1.2px; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-input { min-width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cover::before { display: none; }
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1 class="hero-title">D RoC</h1>
-            <p class="hero-subtitle">Daddy Frequency Productions</p>
-        </header>
+  <canvas id="bg" aria-hidden="true"></canvas>
 
-        <!-- GAME CTA - Purple Chalk Experience -->
-        <section class="section game-cta">
-            <h2 class="cinzel">Play the Purple Chalk Experience</h2>
-            <p>Step into the noir mystery. Investigate the case. Uncover the truth behind the chalk outlines.</p>
-            <a href="https://www.purplechalked.com" target="_blank" class="game-button">START THE CASE</a>
-        </section>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark"><span class="mark-d">D</span><span class="mark-roc">RoC</span></div>
+        <div class="sub">Daddy Frequency • Official Hub</div>
+      </div>
+      <nav class="top-actions" aria-label="Main navigation">
+        <a class="pill" href="#releases">🎧 Releases</a>
+        <a class="pill purple" href="https://purplechalked.com" target="_blank" rel="noopener noreferrer">🔮 Purple Chalked</a>
+        <a class="pill ghost" href="https://www.instagram.com/_d_roc_" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+        <a class="pill ghost" href="https://www.tiktok.com/@big.droc" target="_blank" rel="noopener noreferrer">📱 TikTok</a>
+        <a class="pill ghost" href="https://youtube.com/@bigdroc" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+      </nav>
+    </header>
 
-        <!-- Latest Release -->
-        <section class="section">
-            <h2 class="section-title cinzel">Latest Release</h2>
-            <div class="release-card">
-                <div class="release-artwork">
-                    <img src="https://i.scdn.co/image/ab67616d0000b37338ab950d59283336bdbc630e" alt="My Worst Inner Me - Album Art">
-                </div>
-                <div class="release-info">
-                    <div class="release-label">New Single</div>
-                    <h3 class="release-title cinzel">My Worst Inner Me</h3>
-                    <p class="release-artist">D RoC</p>
-                    <div class="stream-links">
-                        <a href="https://open.spotify.com/album/6rsJRpLk9hs3cJdHGqae3S" target="_blank" class="stream-btn spotify">
-                            <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-                            Spotify
-                        </a>
-                        <a href="https://music.apple.com/us/album/my-worst-inner-me-single/1871912007" target="_blank" class="stream-btn apple">
-                            <svg viewBox="0 0 24 24"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.99c-.042.003-.083.01-.124.013-.5.032-.999.09-1.486.196-.89.2-1.68.568-2.362 1.134-.88.727-1.466 1.64-1.77 2.735-.138.5-.21 1.013-.242 1.535a12.14 12.14 0 00-.012.363v11.086c.003.084.01.168.013.252.033.563.1 1.12.252 1.665.31 1.11.89 2.035 1.783 2.764a5.058 5.058 0 001.99.82c.423.09.854.14 1.287.156.138.006.276.013.415.013h12.07c.083-.003.166-.01.25-.013.474-.03.943-.085 1.4-.19a4.946 4.946 0 002.32-1.234c.78-.732 1.3-1.625 1.58-2.663.127-.47.196-.952.228-1.44.01-.136.017-.273.017-.412V6.124zm-6.73 11.8c-.067.012-.132.023-.197.037a2.726 2.726 0 01-.818.04 2.17 2.17 0 01-.937-.333 2.092 2.092 0 01-.737-.772 2.168 2.168 0 01-.263-.932 2.243 2.243 0 01.188-1.015c.18-.39.455-.707.807-.942.357-.24.762-.39 1.188-.442.253-.03.503-.02.753.014.088.012.176.025.263.044v-.714c0-.227-.003-.453.003-.68a.32.32 0 00-.1-.252.35.35 0 00-.255-.08c-.068.004-.133.02-.198.036-.227.055-.453.112-.68.168-.743.183-1.487.366-2.23.55a.296.296 0 00-.24.293c-.006.428-.003.854-.003 1.282v4.75c0 .082.002.165-.007.246a2.12 2.12 0 01-.342 1.003 2.016 2.016 0 01-.777.68 2.23 2.23 0 01-.784.244 2.588 2.588 0 01-.832-.013 2.032 2.032 0 01-.932-.44 1.768 1.768 0 01-.535-.775 2.08 2.08 0 01-.116-.74 2.06 2.06 0 01.215-.935c.2-.393.492-.71.862-.94.37-.233.78-.375 1.215-.425.283-.033.564-.022.846.01.046.006.093.013.14.022V9.623c0-.14.003-.283-.006-.423a.295.295 0 00-.236-.28c-.045-.012-.092-.02-.138-.03l-1.59-.392c-.862-.212-1.723-.426-2.585-.637a.306.306 0 00-.362.286c-.007.087-.005.175-.005.263v7.254c0 .162.005.324-.006.485a2.28 2.28 0 01-.227.862 2.08 2.08 0 01-.63.745 2.172 2.172 0 01-.868.39 2.537 2.537 0 01-.902.04 2.04 2.04 0 01-.887-.35 1.838 1.838 0 01-.61-.693 2.037 2.037 0 01-.197-.918c.005-.363.096-.704.277-1.017.2-.346.477-.62.82-.822.358-.21.748-.334 1.16-.375.273-.027.545-.02.817.014.048.006.096.014.143.02V8.39c0-.124 0-.247.006-.37a.298.298 0 01.208-.278c.102-.033.206-.06.31-.087l2.537-.627c1.088-.268 2.176-.538 3.264-.805.17-.04.34-.084.512-.118a.312.312 0 01.372.296c.008.12.005.24.005.36V17.92z"/></svg>
-                            Apple Music
-                        </a>
-                        <a href="https://music.apple.com/us/album/my-worst-inner-me-single/1871912007?app=itunes" target="_blank" class="stream-btn itunes">
-                            <svg viewBox="0 0 24 24"><path d="M11.977 23.999c-2.483-.007-4.83-.79-6.614-2.202-.466-.37-.86-.753-1.271-1.243l-.157-.188.36-.304c.198-.167.91-.77 1.582-1.34l1.222-1.036.144.163c.586.662 1.32 1.248 2.04 1.63 1.946 1.033 4.178 1.027 5.81-.013.738-.47 1.178-1.072 1.38-1.888.182-.738.093-1.466-.26-2.14-.455-.862-1.248-1.46-3.127-2.358-2.256-1.08-3.394-1.835-4.345-2.88-.62-.682-1.055-1.47-1.317-2.39-.17-.594-.2-.778-.207-1.263-.01-.564.024-.867.156-1.404.536-2.177 2.218-3.894 4.417-4.51.617-.174 1.052-.232 1.738-.232.687 0 1.14.06 1.765.234 1.067.296 2.058.848 2.915 1.62l.287.26-.652.747c-.358.41-.805.923-1.09 1.25l-.45.517-.144-.17c-.69-.81-1.59-1.345-2.56-1.52-.59-.106-1.344-.064-1.862.104-1.12.363-1.87 1.26-2.043 2.444-.087.586.03 1.27.314 1.83.398.783 1.1 1.395 2.558 2.23.928.532 1.593.943 2.162 1.337 1.203.833 2.032 1.628 2.602 2.49.583.884.91 1.83 1.02 2.95.042.42.023 1.267-.038 1.672-.265 1.772-1.064 3.242-2.388 4.396-.86.75-1.95 1.334-3.088 1.656-.668.188-1.3.286-2.09.32-.233.01-.874.008-1.088-.003z"/></svg>
-                            iTunes
-                        </a>
-                    </div>
-                </div>
+    <main>
+      <section class="hero" aria-label="Featured release">
+        <div class="panel cover-wrap">
+          <div class="badge" id="heroBadge">Out Now</div>
+          <div class="cover">
+            <img id="heroCover" alt="Release cover" decoding="async" loading="eager" />
+          </div>
+        </div>
+
+        <div class="panel hero-copy">
+          <div class="release-switch" id="releaseTabs" role="tablist" aria-label="Release switcher"></div>
+
+          <h1 class="title" id="heroTitle">I WANT IT ALL</h1>
+          <div class="byline">
+            <span class="artist">D RoC</span>
+            <span id="heroMeta">Single • Out now</span>
+          </div>
+          <p class="desc" id="heroDesc">No soft drops. No filler. Just finished work, loud.</p>
+
+          <div class="cta-row" id="heroCtas"></div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Streaming platforms">
+        <h2 class="section-title" id="platformsTitle">Open this release</h2>
+        <div class="platforms" id="platformsGrid"></div>
+      </section>
+
+      <section class="section" id="projects" aria-label="Projects">
+        <h2 class="section-title">Explore My World</h2>
+        <div class="projects-grid">
+          <a href="https://purplechalked.com" target="_blank" rel="noopener noreferrer" class="project-card purple-chalk">
+            <span class="project-badge purple">Interactive Experience</span>
+            <h3 class="project-title">Purple Chalked</h3>
+            <p class="project-desc">Step into the noir mystery. Investigate the case. Uncover the truth behind the chalk outlines.</p>
+            <span class="project-cta">Enter the experience →</span>
+          </a>
+          <a href="https://mud-in-the-trap.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card mud-trap">
+            <span class="project-badge gold">Season Hub</span>
+            <h3 class="project-title">Mud in the Trap</h3>
+            <p class="project-desc">Track the season roadmap. Get notified on new drops and exclusive content.</p>
+            <span class="project-cta">View the roadmap →</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section" id="releases" aria-label="All releases">
+        <h2 class="section-title">All Releases</h2>
+        <div class="release-grid" id="releaseCards"></div>
+      </section>
+
+      <section class="section" id="subscribe" aria-label="Newsletter">
+        <div class="newsletter-box">
+          <h2 class="newsletter-title">Join the Movement</h2>
+          <p class="newsletter-desc">Get notified on new drops, exclusive content, and behind-the-scenes access.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address" />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+          <div class="newsletter-status" id="newsletterStatus" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-row">
+        <img class="footer-photo" src="artist-photo.jpeg" alt="D RoC artist photo" loading="lazy" decoding="async" />
+        <div class="footer-text">
+          <div><strong>DADDY FREQUENCY PRODUCTIONS</strong></div>
+          <div style="margin-top:6px; color: var(--muted2);">No soft drops. Just finished work, loud.</div>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a class="footer-link" href="#releases">Releases</a>
+        <a class="footer-link" href="#projects">Projects</a>
+        <a class="footer-link" href="https://purplechalked.com" target="_blank" rel="noopener noreferrer">Purple Chalked</a>
+        <a class="footer-link" href="https://www.instagram.com/_d_roc_" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="footer-link" href="https://www.tiktok.com/@big.droc" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a class="footer-link" href="https://youtube.com/@bigdroc" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </nav>
+      <p class="footer-copy">© 2026 D RoC / Daddy Frequency Productions. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    const SOCIALS = {
+      instagram: 'https://www.instagram.com/_d_roc_',
+      tiktok: 'https://www.tiktok.com/@big.droc',
+      youtube: 'https://youtube.com/@bigdroc'
+    };
+
+    const RELEASES = [
+      {
+        id: 'i-want-it-all',
+        badge: 'OUT NOW',
+        title: 'I WANT IT ALL',
+        meta: 'Single • Live',
+        desc: 'No settling. No soft drops. Just finished work, loud.',
+        cover: 'i-want-it-all.webp',
+        primaryCtas: [
+          { label: '🎧 Spotify', href: 'https://open.spotify.com/album/42D393HiAKcg2dZnB3IMqq' },
+          { label: '🍎 Apple Music', href: 'https://music.apple.com/us/album/i-want-it-all-single/1868128752?uo=4' },
+          { label: '▶️ YouTube', href: 'https://youtube.com/@bigdroc' }
+        ],
+        platforms: [
+          { icon: '🎵', name: 'Spotify', cta: 'Stream now →', href: 'https://open.spotify.com/album/42D393HiAKcg2dZnB3IMqq' },
+          { icon: '🍎', name: 'Apple Music', cta: 'Listen now →', href: 'https://music.apple.com/us/album/i-want-it-all-single/1868128752?uo=4' },
+          { icon: '▶️', name: 'YouTube', cta: 'Watch + subscribe →', href: 'https://youtube.com/@bigdroc' }
+        ]
+      },
+      {
+        id: 'hush',
+        badge: 'OUT NOW',
+        title: 'HUSH',
+        meta: 'Single • Live',
+        desc: 'Quiet doesn\'t mean soft.',
+        cover: 'hush.jpeg',
+        primaryCtas: [
+          { label: '🎧 Spotify', href: 'https://open.spotify.com/album/3qLxOdcaEBBUDN14kdH5h4' },
+          { label: '🍎 Apple Music', href: '#' },
+          { label: '▶️ YouTube', href: 'https://youtube.com/@bigdroc' }
+        ],
+        platforms: [
+          { icon: '🎵', name: 'Spotify', cta: 'Stream now →', href: 'https://open.spotify.com/album/3qLxOdcaEBBUDN14kdH5h4' },
+          { icon: '🍎', name: 'Apple Music', cta: 'Coming soon →', href: '#' },
+          { icon: '▶️', name: 'YouTube', cta: 'Watch + subscribe →', href: 'https://youtube.com/@bigdroc' }
+        ]
+      },
+      {
+        id: 'dumb-bull',
+        badge: 'COMING SOON',
+        title: 'DUMB BULL IN A CHINA SHOP',
+        meta: 'Single • Coming soon',
+        desc: 'Smash-mode energy. Pre-save link incoming.',
+        cover: 'dumb-bull.webp',
+        primaryCtas: [
+          { label: '⭐ Pre-save', href: '#' },
+          { label: '▶️ YouTube', href: 'https://youtube.com/@bigdroc' }
+        ],
+        platforms: [
+          { icon: '⭐', name: 'Pre-save', cta: 'Coming soon →', href: '#' },
+          { icon: '▶️', name: 'YouTube', cta: 'Watch + subscribe →', href: 'https://youtube.com/@bigdroc' }
+        ]
+      }
+    ];
+
+    const PLACEHOLDER_SVG = (label) => {
+      const safe = (label || 'D RoC').replace(/[<>]/g, '');
+      const svg = `
+        <svg xmlns='http://www.w3.org/2000/svg' width='900' height='900'>
+          <defs>
+            <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+              <stop offset='0' stop-color='#d4af37' stop-opacity='0.25'/>
+              <stop offset='1' stop-color='#ff2a2a' stop-opacity='0.22'/>
+            </linearGradient>
+          </defs>
+          <rect width='100%' height='100%' fill='#090909'/>
+          <rect width='100%' height='100%' fill='url(#g)'/>
+          <text x='50%' y='48%' dominant-baseline='middle' text-anchor='middle'
+                font-family='Inter, system-ui, sans-serif' font-size='64' font-weight='900'
+                fill='rgba(255,255,255,0.92)'>${safe}</text>
+          <text x='50%' y='58%' dominant-baseline='middle' text-anchor='middle'
+                font-family='Inter, system-ui, sans-serif' font-size='22' font-weight='800'
+                fill='rgba(255,255,255,0.55)'>DADDY FREQUENCY</text>
+        </svg>`;
+      return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+    };
+
+    function safeHref(href) {
+      if (!href) return '#';
+      return href;
+    }
+
+    function setActiveRelease(id) {
+      const release = RELEASES.find(r => r.id === id) || RELEASES[0];
+
+      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.id === release.id));
+
+      document.getElementById('heroBadge').textContent = release.badge;
+      document.getElementById('heroTitle').textContent = release.title;
+      document.getElementById('heroMeta').textContent = release.meta;
+      document.getElementById('heroDesc').textContent = release.desc;
+
+      const heroCover = document.getElementById('heroCover');
+      const coverSrc = release.cover ? release.cover : PLACEHOLDER_SVG(release.title);
+      heroCover.src = coverSrc;
+      heroCover.onerror = () => { heroCover.src = PLACEHOLDER_SVG(release.title); };
+
+      const heroCtas = document.getElementById('heroCtas');
+      heroCtas.innerHTML = '';
+      (release.primaryCtas || []).slice(0, 3).forEach((c, idx) => {
+        const a = document.createElement('a');
+        a.className = 'btn' + (idx === 0 ? '' : ' secondary');
+        a.textContent = c.label;
+        a.href = safeHref(c.href);
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        heroCtas.appendChild(a);
+      });
+
+      document.getElementById('platformsTitle').textContent = 'Open this release';
+      const grid = document.getElementById('platformsGrid');
+      grid.innerHTML = '';
+      (release.platforms || []).forEach(p => {
+        const a = document.createElement('a');
+        a.className = 'platform-card';
+        a.href = safeHref(p.href);
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.innerHTML = `
+          <div class='p-ico'>${p.icon}</div>
+          <div class='p-meta'>
+            <div class='p-name'>${p.name}</div>
+            <div class='p-cta'>${p.cta}</div>
+          </div>
+        `;
+        grid.appendChild(a);
+      });
+
+      const url = new URL(window.location.href);
+      url.hash = release.id;
+      history.replaceState({}, '', url);
+    }
+
+    function buildUI() {
+      const tabs = document.getElementById('releaseTabs');
+      tabs.innerHTML = '';
+      RELEASES.forEach(r => {
+        const b = document.createElement('button');
+        b.className = 'tab';
+        b.type = 'button';
+        b.dataset.id = r.id;
+        b.textContent = r.title;
+        b.setAttribute('role', 'tab');
+        b.addEventListener('click', () => setActiveRelease(r.id));
+        tabs.appendChild(b);
+      });
+
+      const cards = document.getElementById('releaseCards');
+      cards.innerHTML = '';
+      RELEASES.forEach(r => {
+        const card = document.createElement('article');
+        card.className = 'release-card';
+
+        const thumbSrc = r.cover ? r.cover : PLACEHOLDER_SVG(r.title);
+
+        card.innerHTML = `
+          <div class='thumb'><img alt='${r.title} cover' src='${thumbSrc}' onerror="this.src='${PLACEHOLDER_SVG(r.title)}'" loading="lazy" /></div>
+          <div>
+            <h3 class='r-title'>${r.title}</h3>
+            <div class='r-sub'>${r.meta}</div>
+            <div class='r-actions'>
+              <a class='mini' href='${safeHref((r.primaryCtas?.[0]||{}).href)}' target='_blank' rel='noopener noreferrer'>Open</a>
+              <a class='mini secondary' href='#' data-go='${r.id}'>View here</a>
             </div>
-        </section>
+          </div>
+        `;
 
-        <section class="section" id="hero">
-            <div style="text-align: center; margin-bottom: 30px;">
-                <h2 class="cinzel" style="font-size: 1.5rem; margin-bottom: 10px;">Join the Movement</h2>
-                <p style="color: var(--muted);">Get notified on new drops and exclusive content.</p>
-            </div>
-            <form class="email-form" id="emailForm">
-                <input type="email" class="email-input" placeholder="Enter your email address" required>
-                <button type="submit" class="email-submit">SUBSCRIBE</button>
-            </form>
-            <div id="emailMsg" class="email-msg"></div>
-        </section>
+        card.querySelector('[data-go]')?.addEventListener('click', (e) => {
+          e.preventDefault();
+          setActiveRelease(r.id);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
-        <section class="section">
-            <h2 class="section-title cinzel">Season Roadmap</h2>
-            <div id="roadmapGrid" class="roadmap-list">
-                <div class="loading">Loading tracks...</div>
-            </div>
-        </section>
+        cards.appendChild(card);
+      });
 
-        <section class="section">
-            <h2 class="section-title cinzel">Photo Wall</h2>
-            <div id="photoGrid" class="photo-grid">
-                <div class="loading">Loading photos...</div>
-            </div>
-        </section>
-    </div>
+      const hash = (window.location.hash || '').replace('#', '');
+      const start = RELEASES.some(r => r.id === hash) ? hash : RELEASES[0].id;
+      setActiveRelease(start);
+    }
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script>
-        // NOTE: Update these with your actual Supabase project credentials
-        // The current values are placeholders and will not work
-        const SUPABASE_URL = 'https://skytldwvwkfulytqnuac.supabase.co';
-        const SUPABASE_KEY = 'sb_publishable_3pwfy4YCOqGYsBNtWupSVw_ziIAyjh2';
-        
-        // Helper function to sanitize text for safe HTML insertion
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
+    // Newsletter form handler
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input').value;
+      const status = document.getElementById('newsletterStatus');
+
+      // For now, just show a success message
+      // You can connect this to your email service later
+      status.textContent = '🎉 Thanks for subscribing! Stay tuned for updates.';
+      this.querySelector('input').value = '';
+
+      // Optional: Send to your backend or email service
+      // fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({ email }) });
+    });
+
+    buildUI();
+  </script>
+
+  <!-- Three.js Particles Background -->
+  <script type="module">
+    import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const canvas = document.getElementById('bg');
+
+    let renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+    } catch (e) {
+      canvas.style.display = 'none';
+    }
+
+    if (!renderer) {
+      // no-op
+    } else {
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 200);
+      camera.position.z = 42;
+
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      const particleCount = Math.min(950, Math.floor((window.innerWidth * window.innerHeight) / 2300));
+      const geom = new THREE.BufferGeometry();
+      const positions = new Float32Array(particleCount * 3);
+
+      for (let i = 0; i < particleCount; i++) {
+        const i3 = i * 3;
+        const r = 38 * Math.cbrt(Math.random());
+        const theta = Math.random() * Math.PI * 2;
+        const phi = Math.acos(2 * Math.random() - 1);
+        positions[i3 + 0] = r * Math.sin(phi) * Math.cos(theta);
+        positions[i3 + 1] = r * Math.sin(phi) * Math.sin(theta) * 0.75;
+        positions[i3 + 2] = r * Math.cos(phi);
+      }
+
+      geom.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+      const matGold = new THREE.PointsMaterial({
+        color: new THREE.Color(0xd4af37),
+        size: 0.18,
+        transparent: true,
+        opacity: 0.55,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending
+      });
+
+      const matRed = new THREE.PointsMaterial({
+        color: new THREE.Color(0xff2a2a),
+        size: 0.12,
+        transparent: true,
+        opacity: 0.28,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending
+      });
+
+      const points = new THREE.Points(geom, matGold);
+      const points2 = new THREE.Points(geom.clone(), matRed);
+      points2.rotation.y = Math.PI / 5;
+
+      scene.add(points);
+      scene.add(points2);
+
+      let raf = 0;
+      let last = performance.now();
+
+      function onResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      }
+      window.addEventListener('resize', onResize);
+
+      function tick(now) {
+        const dt = Math.min(0.032, (now - last) / 1000);
+        last = now;
+
+        points.rotation.y += dt * 0.08;
+        points.rotation.x += dt * 0.02;
+        points2.rotation.y -= dt * 0.06;
+
+        const scroll = window.scrollY || 0;
+        const fade = Math.max(0.45, 1 - scroll / 900);
+        matGold.opacity = 0.55 * fade;
+        matRed.opacity = 0.28 * fade;
+
+        renderer.render(scene, camera);
+        raf = requestAnimationFrame(tick);
+      }
+
+      function start() {
+        if (prefersReduced) {
+          renderer.render(scene, camera);
+          return;
         }
-        
-        let supabase = null;
-        try {
-            const { createClient } = window.supabase;
-            supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-        } catch (error) {
-            console.error('Failed to create Supabase client:', error);
-        }
+        if (!raf) raf = requestAnimationFrame(tick);
+      }
 
-        async function init() {
-            // Email Capture
-            const emailForm = document.getElementById('emailForm');
-            const emailMsg = document.getElementById('emailMsg');
-            
-            emailForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const email = emailForm.querySelector('input').value;
-                
-                if (!supabase) {
-                    emailMsg.textContent = 'Service unavailable. Please try again later.';
-                    emailMsg.style.color = '#ff4444';
-                    return;
-                }
-                
-                emailMsg.textContent = 'Processing...';
-                emailMsg.style.color = 'var(--gold)';
+      function stop() {
+        if (raf) cancelAnimationFrame(raf);
+        raf = 0;
+      }
 
-                try {
-                    const { error } = await supabase
-                        .from('subscribers')
-                        .insert([{ email }]);
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stop(); else start();
+      });
 
-                    if (error) {
-                        throw error;
-                    }
-                    emailMsg.textContent = 'You are in. Welcome to the frequency.';
-                    emailMsg.style.color = 'var(--purple)';
-                    emailForm.reset();
-                } catch (error) {
-                    console.error('Email subscription error:', error);
-                    emailMsg.textContent = 'Service unavailable. Please try again later.';
-                    emailMsg.style.color = '#ff4444';
-                }
-            });
-
-            // Fetch Tracks
-            const roadmapGrid = document.getElementById('roadmapGrid');
-            
-            if (!supabase) {
-                roadmapGrid.innerHTML = `<div class="loading">Service temporarily unavailable. Please try again later.</div>`;
-            } else {
-                try {
-                    const { data: tracks, error: tracksError } = await supabase
-                        .from('tracks')
-                        .select('*')
-                        .order('id', { ascending: true });
-
-                    if (tracksError) {
-                        throw tracksError;
-                    }
-                    
-                    if (tracks && tracks.length > 0) {
-                        roadmapGrid.innerHTML = tracks.map(track => `
-                            <div class="track-item">
-                                <div class="track-name">${escapeHtml(track.title || track.name || '')}</div>
-                                <div class="track-status">${escapeHtml(track.status || 'Released')}</div>
-                            </div>
-                        `).join('');
-                    } else {
-                        roadmapGrid.innerHTML = '<div class="loading">No tracks found.</div>';
-                    }
-                } catch (error) {
-                    console.error('Error loading tracks:', error);
-                    roadmapGrid.innerHTML = `<div class="loading">Unable to load tracks. Please check your network connection or try again later.</div>`;
-                }
-            }
-
-            // Fetch Posts
-            const photoGrid = document.getElementById('photoGrid');
-            
-            if (!supabase) {
-                photoGrid.innerHTML = `<div class="loading">Service temporarily unavailable. Please try again later.</div>`;
-            } else {
-                try {
-                    const { data: posts, error: postsError } = await supabase
-                        .from('posts')
-                        .select('*')
-                        .eq('visibility', 'public')
-                        .order('created_at', { ascending: false });
-
-                    if (postsError) {
-                        throw postsError;
-                    }
-                    
-                    if (posts && posts.length > 0) {
-                        photoGrid.innerHTML = posts.map(post => `
-                            <div class="photo-item">
-                                <img src="${escapeHtml(post.image_url || post.url || '')}" alt="${escapeHtml(post.caption || 'Photo')}" loading="lazy">
-                            </div>
-                        `).join('');
-                    } else {
-                        photoGrid.innerHTML = '<div class="loading">No public photos found.</div>';
-                    }
-                } catch (error) {
-                    console.error('Error loading posts:', error);
-                    photoGrid.innerHTML = `<div class="loading">Unable to load photos. Please check your network connection or try again later.</div>`;
-                }
-            }
-        }
-
-        init();
-    </script>
-
-    <!-- Vercel Speed Insights -->
-    <script>
-        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
+      start();
+    }
+  </script>
 </body>
 </html>
