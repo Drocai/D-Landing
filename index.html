@@ -858,6 +858,7 @@
         <a class="footer-link" href="https://www.tiktok.com/@big.droc" target="_blank" rel="noopener noreferrer">TikTok</a>
         <a class="footer-link" href="https://youtube.com/@bigdroc" target="_blank" rel="noopener noreferrer">YouTube</a>
       </nav>
+      <p class="footer-copy" id="footerCopy">© <span id="copyrightYear"></span> D RoC / Daddy Frequency Productions. All rights reserved.</p>
       <p class="footer-copy">© 2026 D RoC / Daddy Frequency Productions. All rights reserved.<br><span style="font-size:0.8rem;">Independent artist. All rights owned.</span></p>
     </footer>
   </div>
@@ -925,7 +926,15 @@
     ];
 
     const PLACEHOLDER_SVG = (label) => {
-      const safe = (label || 'D RoC').replace(/[<>]/g, '');
+      // Sanitize label to prevent XSS
+      const safe = (label || 'D RoC')
+        .replace(/&/g, '&amp;')    // Escape ampersand
+        .replace(/</g, '&lt;')     // Escape less-than
+        .replace(/>/g, '&gt;')     // Escape greater-than
+        .replace(/"/g, '&quot;')   // Escape quotes
+        .replace(/'/g, '&#39;')    // Escape single quotes
+        .trim() || 'D RoC';
+      
       const svg = `
         <svg xmlns='http://www.w3.org/2000/svg' width='900' height='900'>
           <defs>
@@ -947,8 +956,37 @@
     };
 
     function safeHref(href) {
-      if (!href) return '#';
-      return href;
+      if (!href || typeof href !== 'string') return '#';
+      
+      const trimmed = String(href).trim();
+
+      // Allow hash-only links (e.g., "#section")
+      if (trimmed.startsWith('#')) {
+        return trimmed;
+      }
+
+      // Allow common relative URLs
+      if (
+        trimmed.startsWith('/') ||
+        trimmed.startsWith('./') ||
+        trimmed.startsWith('../')
+      ) {
+        return trimmed;
+      }
+
+      try {
+        const url = new URL(trimmed, window.location.href);
+        const allowedProtocols = ['http:', 'https:', 'mailto:', 'tel:'];
+
+        if (!allowedProtocols.includes(url.protocol)) {
+          return '#';
+        }
+
+        return url.href;
+      } catch (e) {
+        // If URL parsing fails, fall back to a safe default
+        return '#';
+      }
     }
 
     function setActiveRelease(id) {
@@ -987,13 +1025,28 @@
         a.href = safeHref(p.href);
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
-        a.innerHTML = `
-          <div class='p-ico'>${p.icon}</div>
-          <div class='p-meta'>
-            <div class='p-name'>${p.name}</div>
-            <div class='p-cta'>${p.cta}</div>
-          </div>
-        `;
+        
+        const pIcon = document.createElement('div');
+        pIcon.className = 'p-ico';
+        pIcon.textContent = p.icon;
+
+        const pMeta = document.createElement('div');
+        pMeta.className = 'p-meta';
+
+        const pName = document.createElement('div');
+        pName.className = 'p-name';
+        pName.textContent = p.name;
+
+        const pCta = document.createElement('div');
+        pCta.className = 'p-cta';
+        pCta.textContent = p.cta;
+
+        pMeta.appendChild(pName);
+        pMeta.appendChild(pCta);
+
+        a.appendChild(pIcon);
+        a.appendChild(pMeta);
+        
         grid.appendChild(a);
       });
 
@@ -1024,17 +1077,52 @@
 
         const thumbSrc = r.cover ? r.cover : PLACEHOLDER_SVG(r.title);
 
-        card.innerHTML = `
-          <div class='thumb'><img alt='${r.title} cover' src='${thumbSrc}' onerror="this.src='${PLACEHOLDER_SVG(r.title)}'" loading="lazy" /></div>
-          <div>
-            <h3 class='r-title'>${r.title}</h3>
-            <div class='r-sub'>${r.meta}</div>
-            <div class='r-actions'>
-              <a class='mini' href='${safeHref((r.primaryCtas?.[0]||{}).href)}' target='_blank' rel='noopener noreferrer'>Open</a>
-              <a class='mini secondary' href='#' data-go='${r.id}'>View here</a>
-            </div>
-          </div>
-        `;
+        // Create thumb container
+        const thumbDiv = document.createElement('div');
+        thumbDiv.className = 'thumb';
+        const img = document.createElement('img');
+        img.alt = r.title + ' cover';
+        img.src = thumbSrc;
+        img.loading = 'lazy';
+        img.onerror = function() { this.src = PLACEHOLDER_SVG(r.title); };
+        thumbDiv.appendChild(img);
+
+        // Create content container
+        const contentDiv = document.createElement('div');
+        
+        const title = document.createElement('h3');
+        title.className = 'r-title';
+        title.textContent = r.title;
+        
+        const sub = document.createElement('div');
+        sub.className = 'r-sub';
+        sub.textContent = r.meta;
+        
+        const actions = document.createElement('div');
+        actions.className = 'r-actions';
+        
+        const openLink = document.createElement('a');
+        openLink.className = 'mini';
+        openLink.href = safeHref((r.primaryCtas?.[0]||{}).href);
+        openLink.target = '_blank';
+        openLink.rel = 'noopener noreferrer';
+        openLink.textContent = 'Open';
+        
+        const viewLink = document.createElement('a');
+        viewLink.className = 'mini secondary';
+        viewLink.href = '#';
+        viewLink.dataset.go = r.id;
+        viewLink.textContent = 'View here';
+        
+        actions.appendChild(openLink);
+        actions.appendChild(viewLink);
+        
+        contentDiv.appendChild(title);
+        contentDiv.appendChild(sub);
+        contentDiv.appendChild(actions);
+        
+        card.appendChild(thumbDiv);
+        card.appendChild(contentDiv);
 
         card.querySelector('[data-go]')?.addEventListener('click', (e) => {
           e.preventDefault();
@@ -1053,7 +1141,6 @@
     // Newsletter form handler
     document.getElementById('newsletterForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      const email = this.querySelector('input').value;
       const status = document.getElementById('newsletterStatus');
 
       // For now, just show a success message
@@ -1062,8 +1149,12 @@
       this.querySelector('input').value = '';
 
       // Optional: Send to your backend or email service
+      // const email = this.querySelector('input').value;
       // fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({ email }) });
     });
+
+    // Set dynamic copyright year
+    document.getElementById('copyrightYear').textContent = new Date().getFullYear();
 
     buildUI();
   </script>

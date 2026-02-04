@@ -65,9 +65,9 @@ describe('createPlaceholderSVG', () => {
 });
 
 describe('sanitizeLabel', () => {
-  it('removes angle brackets', () => {
-    expect(sanitizeLabel('<script>')).toBe('script');
-    expect(sanitizeLabel('test<>value')).toBe('testvalue');
+  it('escapes angle brackets', () => {
+    expect(sanitizeLabel('<script>')).toBe('&lt;script&gt;');
+    expect(sanitizeLabel('test<>value')).toBe('test&lt;&gt;value');
   });
 
   it('escapes ampersand', () => {
