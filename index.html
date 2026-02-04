@@ -928,8 +928,9 @@
     const PLACEHOLDER_SVG = (label) => {
       // Sanitize label to prevent XSS
       const safe = (label || 'D RoC')
-        .replace(/[<>]/g, '')      // Remove angle brackets
         .replace(/&/g, '&amp;')    // Escape ampersand
+        .replace(/</g, '&lt;')     // Escape less-than
+        .replace(/>/g, '&gt;')     // Escape greater-than
         .replace(/"/g, '&quot;')   // Escape quotes
         .replace(/'/g, '&#39;')    // Escape single quotes
         .trim() || 'D RoC';
@@ -1080,7 +1081,7 @@
         const thumbDiv = document.createElement('div');
         thumbDiv.className = 'thumb';
         const img = document.createElement('img');
-        img.alt = `${r.title} cover`;
+        img.alt = r.title + ' cover';
         img.src = thumbSrc;
         img.loading = 'lazy';
         img.onerror = function() { this.src = PLACEHOLDER_SVG(r.title); };

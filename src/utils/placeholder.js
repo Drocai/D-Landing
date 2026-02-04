@@ -40,10 +40,11 @@ export function sanitizeLabel(label) {
     return 'D RoC';
   }
 
-  // Remove potentially dangerous characters
+  // Escape potentially dangerous characters
   return label
-    .replace(/[<>]/g, '')      // Remove angle brackets
     .replace(/&/g, '&amp;')    // Escape ampersand
+    .replace(/</g, '&lt;')     // Escape less-than
+    .replace(/>/g, '&gt;')     // Escape greater-than
     .replace(/"/g, '&quot;')   // Escape quotes
     .replace(/'/g, '&#39;')    // Escape single quotes
     .trim() || 'D RoC';
