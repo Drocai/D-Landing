@@ -13,9 +13,14 @@
     "@testing-library/dom": "^10.0.0",
     "@vitest/coverage-v8": "^2.0.0",
     "jsdom": "^24.0.0",
-    "vitest": "^2.0.0"
+    "vitest": "^2.0.0",
+    "ws": "^8.19.0"
   },
-  "keywords": ["music", "landing-page", "d-roc"],
+  "keywords": [
+    "music",
+    "landing-page",
+    "d-roc"
+  ],
   "author": "D RoC",
   "license": "ISC"
 }
