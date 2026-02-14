@@ -20,7 +20,7 @@ const useGameStore = create((set) => ({
   gameState: 'MENU',
   score: 0,
   highScore: typeof window !== 'undefined' && window.localStorage
-    ? Number.parseInt(localStorage.getItem('db_highscore') || '0', 10)
+    ? Number.parseInt(window.localStorage.getItem('db_highscore') || '0', 10)
     : 0,
   hype: 100,
   speed: 0.5,
@@ -37,7 +37,7 @@ const useGameStore = create((set) => ({
     set((state) => {
       const newHigh = Math.max(score, state.highScore);
       if (typeof window !== 'undefined' && window.localStorage) {
-        localStorage.setItem('db_highscore', String(newHigh));
+        window.localStorage.setItem('db_highscore', String(newHigh));
       }
       return { highScore: newHigh };
     }),
