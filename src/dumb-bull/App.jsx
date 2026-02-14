@@ -74,7 +74,7 @@ const SynthwaveFloorShader = {
 const PlayerBull = () => {
   const { gameState } = useGameStore();
   const playerRef = useRef(null);
-  const [runTex] = useLoader(THREE.TextureLoader, ['/bull_run.png']);
+  const runTex = useLoader(THREE.TextureLoader, '/bull_run.png');
 
   useFrame(({ mouse, clock }) => {
     if (gameState !== 'PLAYING' || !playerRef.current) {
