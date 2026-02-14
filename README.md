@@ -100,6 +100,11 @@ create policy "Allow public insert on subscribers"
   with check (true);
 ```
 
+
+## 🐂 DUMB BULL prototype
+
+A React-based game prototype scaffold is included at `src/dumb-bull/App.jsx` with setup notes in `src/dumb-bull/README.md`.
+
 ## 📁 Project Structure
 
 ```
