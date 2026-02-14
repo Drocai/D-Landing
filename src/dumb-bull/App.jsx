@@ -19,7 +19,9 @@ import { create } from 'zustand';
 const useGameStore = create((set) => ({
   gameState: 'MENU',
   score: 0,
-  highScore: Number.parseInt(localStorage.getItem('db_highscore') || '0', 10),
+  highScore: typeof window !== 'undefined' && window.localStorage
+    ? Number.parseInt(localStorage.getItem('db_highscore') || '0', 10)
+    : 0,
   hype: 100,
   speed: 0.5,
   setGameState: (state) => set({ gameState: state }),
@@ -34,7 +36,9 @@ const useGameStore = create((set) => ({
   updateHighscore: (score) =>
     set((state) => {
       const newHigh = Math.max(score, state.highScore);
-      localStorage.setItem('db_highscore', String(newHigh));
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem('db_highscore', String(newHigh));
+      }
       return { highScore: newHigh };
     }),
 }));
@@ -70,7 +74,7 @@ const SynthwaveFloorShader = {
 const PlayerBull = () => {
   const { gameState } = useGameStore();
   const playerRef = useRef(null);
-  const [runTex] = useLoader(THREE.TextureLoader, ['./bull_run.png']);
+  const [runTex] = useLoader(THREE.TextureLoader, ['/bull_run.png']);
 
   useFrame(({ mouse, clock }) => {
     if (gameState !== 'PLAYING' || !playerRef.current) {
@@ -125,7 +129,7 @@ const ItemVisual = ({ type }) => {
   }
 
   return (
-    <mesh position={[0, 0.5, 0]}>
+    <mesh ref={mesh} position={[0, 0.5, 0]}>
       <boxGeometry args={[1.5, 2, 0.5]} />
       <meshStandardMaterial color="#111" emissive="red" emissiveIntensity={0.2} />
       <Sparkles count={10} scale={2} size={5} speed={0.4} opacity={0.5} color="red" />
@@ -137,21 +141,27 @@ const ObstacleManager = () => {
   const { gameState, addScore, damage, hype, score, setGameState, updateHighscore } = useGameStore();
   const [items, setItems] = useState([]);
   const lastSpawn = useRef(0);
+  const itemIdCounter = useRef(0);
 
   useFrame((state, delta) => {
     if (gameState !== 'PLAYING') {
       return;
     }
 
-    if (state.clock.elapsedTime - lastSpawn.current > 0.8) {
-      lastSpawn.current = state.clock.elapsedTime;
-      const type = Math.random() > 0.3 ? 'CHINA' : 'WALL';
-      const lane = (Math.random() - 0.5) * 8;
-      setItems((prev) => [...prev, { id: Math.random(), x: lane, z: -20, type, active: true }]);
-    }
+    setItems((prev) => {
+      let updated = prev;
 
-    setItems((prev) =>
-      prev
+      // Spawn new item if needed
+      if (state.clock.elapsedTime - lastSpawn.current > 0.8) {
+        lastSpawn.current = state.clock.elapsedTime;
+        const type = Math.random() > 0.3 ? 'CHINA' : 'WALL';
+        const lane = (Math.random() - 0.5) * 8;
+        itemIdCounter.current += 1;
+        updated = [...updated, { id: itemIdCounter.current, x: lane, z: -20, type, active: true }];
+      }
+
+      // Move items and check collisions in a single pass
+      return updated
         .map((item) => {
           const newZ = item.z + 10 * delta;
 
@@ -172,8 +182,8 @@ const ObstacleManager = () => {
 
           return { ...item, z: newZ };
         })
-        .filter((item) => item.z < 10),
-    );
+        .filter((item) => item.z < 10);
+    });
 
     if (hype <= 0) {
       updateHighscore(score);
